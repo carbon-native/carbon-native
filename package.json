@@ -1,0 +1,35 @@
+{
+  "name": "carbon-native",
+  "version": "0.0.1",
+  "description": "A set of UI components for building React Native apps.",
+  "author": "",
+  "contributors": [
+    { "name": "Tyler Buchea", "email": "tyler@buchea.com" },
+    { "name": "Josh Buchea", "email": "josh@buchea.com" }
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carbon-native/carbon-native"
+  },
+  "bugs": {
+    "url": "https://github.com/carbon-native/carbon-native/issues"
+  },
+  "keywords": [
+    "react-native",
+    "ui"
+  ],
+  "peerDepenecies": {
+    "react-native": "^0.20.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^5.0.0",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.2.3"
+  },
+  "license": "MIT"
+}
