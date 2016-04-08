@@ -10,7 +10,7 @@ npm install carbon-native --save
 
 ## Components
 
-### Badges
+### Badge
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/badge.png" width="375" height="667" alt="Badge">
 
