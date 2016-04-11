@@ -2,6 +2,8 @@
 
 **A set of UI components for building React Native apps**
 
+Check out the [demo app](https://github.com/carbon-native/kitchen-sink).
+
 ## Get Started
 
 ```
