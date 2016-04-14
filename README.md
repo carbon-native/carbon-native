@@ -14,7 +14,7 @@ npm install carbon-native --save
 
 ### Badge
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/badge.png" width="375" height="667" alt="Badge">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/badge.png" width="375" height="auto" alt="Badge">
 
 ```
 import {
@@ -29,7 +29,7 @@ import {
 
 ### Buttons
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/buttons.png" width="375" height="667" alt="Buttons">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/buttons.png" width="375" height="auto" alt="Buttons">
 
 ```
 import {
@@ -56,7 +56,7 @@ import {
 
 ### Cards
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/cards.png" width="375" height="667" alt="Cards">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/cards.png" width="375" height="auto" alt="Cards">
 
 ```
 import {
@@ -74,7 +74,7 @@ import {
 
 ### Icons
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="667" alt="Icons">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
 
 ```
 npm install react-native-vector-icons --save
@@ -92,7 +92,7 @@ import Icon 'react-native-vector-icons/FontAwesome';
 
 ### Lists
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/lists.png" width="375" height="667" alt="Lists">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
 
 ```
 import {
@@ -116,7 +116,7 @@ import {
 
 ### Range
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/range.png" width="375" height="667" alt="Range">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/range.png" width="375" height="auto" alt="Range">
 
 ```
 import {
@@ -131,7 +131,7 @@ import {
 
 ### Toggle
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toggle.png" width="375" height="667" alt="Toggle">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toggle.png" width="375" height="auto" alt="Toggle">
 
 ```
 import {
@@ -147,7 +147,7 @@ import {
 
 ### Toolbars
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbars.png" width="375" height="667" alt="Toolbars">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbars.png" width="375" height="auto" alt="Toolbars">
 
 ```
 import {
@@ -162,7 +162,7 @@ import {
 
 ### Typography
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/typography.png" width="375" height="667" alt="Typography">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/typography.png" width="375" height="auto" alt="Typography">
 
 ```
 import {
