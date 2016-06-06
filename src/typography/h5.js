@@ -1,5 +1,7 @@
-import React, {PropTypes} from 'react';
-import {
+import React, {
+  PropTypes,
+} from 'react';
+
   StyleSheet,
   Text,
 } from 'react-native';
