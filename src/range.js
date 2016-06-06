@@ -1,5 +1,5 @@
-import React, {
-  PropTypes,
+import React, {PropTypes} from 'react';
+import {
   SliderIOS,
 } from 'react-native';
 
