@@ -8,8 +8,11 @@ import {
 
 import {
   carbonStyles,
-  Container,
 } from '../styles';
+
+import {
+  Container,
+} from '../container';
 
 const cs = StyleSheet.create(carbonStyles);
 
