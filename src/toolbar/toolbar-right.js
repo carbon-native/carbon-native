@@ -31,15 +31,17 @@ const defaultProps = {};
 
 export default function ToolbarRight(props) {
   return (
-    <Container
-      {...props}
-      style={[
-        cs.toolbarRight,
-        props.style,
-      ]}
-    >
-      {props.children}
-    </Container>
+    <View style={[cs.container, props.padding && cs.padding, props.style]}>
+      <View
+        {...props}
+        style={[
+          cs.toolbarRight,
+          props.style,
+        ]}
+      >
+        {props.children}
+      </View>
+    </View>
   );
 }
 
