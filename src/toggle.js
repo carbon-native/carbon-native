@@ -1,5 +1,8 @@
 import React, {
   PropTypes,
+} from 'react';
+
+import {
   Switch,
 } from 'react-native';
 
