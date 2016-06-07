@@ -4,12 +4,16 @@ import React, {
 
 import {
   StyleSheet,
+  View,
 } from 'react-native';
 
 import {
   carbonStyles,
-  Container,
 } from '../styles';
+
+import {
+  Container,
+} from '../container';
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -28,15 +32,17 @@ const defaultProps = {};
 
 export default function ToolbarLeft(props) {
   return (
-    <Container
-      {...props}
-      style={[
-        cs.toolbarLeft,
-        props.style,
-      ]}
-    >
-      {props.children}
-    </Container>
+    <View style={[cs.container, props.padding && cs.padding, props.style]}>
+      <View
+        {...props}
+        style={[
+          cs.toolbarLeft,
+          props.style,
+        ]}
+      >
+        {props.children}
+      </View>
+    </View>
   );
 }
 
