@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 
 import {
-  SliderIOS,
+  Slider,
 } from 'react-native';
 
 import {
@@ -22,7 +22,7 @@ const defaultProps = {
 export default function Toggle(props) {
   // const color = colors[props.color];
   return (
-    <SliderIOS
+    <Slider
       {...props}
       style={[props.style]}
     />
