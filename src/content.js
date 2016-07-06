@@ -25,7 +25,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  padding: false,
   scroll: true,
 };
 
@@ -34,8 +33,8 @@ export default function Content(props) {
   if (props.scroll === true) {
     return (
       <ScrollView
-        style={contentStyle}
         {...props}
+        style={contentStyle}
       >
         {props.children}
       </ScrollView>
@@ -43,8 +42,8 @@ export default function Content(props) {
   }
   return (
     <View
-      style={contentStyle}
       {...props}
+      style={contentStyle}
     >
       {props.children}
     </View>

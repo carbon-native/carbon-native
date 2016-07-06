@@ -22,9 +22,7 @@ const propTypes = {
   style: PropTypes.any,
 };
 
-const defaultProps = {
-  padding: false,
-};
+const defaultProps = {};
 
 export default function Container(props) {
   return (
