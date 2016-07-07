@@ -188,7 +188,7 @@ export const carbonStyles = {
   },
   itemText: {
     flex: 1,
-    paddingVertical: 12,
+    marginVertical: 12,
     fontSize: 17,
     fontWeight: '400',
   },
