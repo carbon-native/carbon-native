@@ -1,5 +1,6 @@
 import {
   StyleSheet,
+  Platform,
 } from 'react-native';
 
 // colors
@@ -101,8 +102,15 @@ export const carbonStyles = {
     // stuff
   },
   toolbarTitle: {
-    fontSize: 17,
     fontWeight: '600',
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 20,
+      },
+    }),
   },
   toolbarLeft: {
     flexDirection: 'row',
