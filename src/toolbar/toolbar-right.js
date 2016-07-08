@@ -4,11 +4,11 @@ import React, {
 
 import {
   StyleSheet,
+  View,
 } from 'react-native';
 
 import {
   carbonStyles,
-  Container,
 } from '../styles';
 
 const cs = StyleSheet.create(carbonStyles);
@@ -28,15 +28,16 @@ const defaultProps = {};
 
 export default function ToolbarRight(props) {
   return (
-    <Container
+    <View
       {...props}
       style={[
+        cs.container,
         cs.toolbarRight,
         props.style,
       ]}
     >
       {props.children}
-    </Container>
+    </View>
   );
 }
 
