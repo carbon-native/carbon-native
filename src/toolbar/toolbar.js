@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -26,19 +16,37 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({
+  toolbar: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 44,
+  },
+  toolbarHeader: {
+    paddingTop: 20,
+    height: 64,
+  },
+  toolbarFooter: {
+    // stuff
+  },
+});
+
 export default function Toolbar(props) {
-  const color = (props.color) ? props.color : null;
-  const bgColor = (color) ? `${color}Bg` : null;
-  const header = (props.header) ? 'toolbarHeader' : null;
-  const footer = (props.footer) ? 'toolbarFooter' : null;
+  const header = props.header ? 'toolbarHeader' : null;
+  const footer = props.footer ? 'toolbarFooter' : null;
+  const color = props.color ? props.color : null;
+  const bgColor = color ? `${color}Bg` : null;
   return (
     <View
       {...props}
       style={[
-        cs.toolbar, header &&
-        cs[header], footer &&
-        cs[footer], bgColor &&
-        cs[bgColor],
+        styles.toolbar,
+        header && styles[header],
+        footer && styles[footer],
+        bgColor && cs[bgColor],
         props.style,
       ]}
     >

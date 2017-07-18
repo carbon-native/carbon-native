@@ -1,14 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  Switch,
-} from 'react-native';
-
-import {
-  colors,
-} from './styles';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Switch } from 'react-native';
+import { colors } from './styles';
 
 const propTypes = {
   color: PropTypes.string,

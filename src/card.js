@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from './styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -23,6 +13,15 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({
+  // margin: 10,
+  marginBottom: 20,
+  borderRadius: 2,
+  backgroundColor: '#fff',
+});
+
 export default function Card(props) {
   return (
     <View
@@ -31,7 +30,7 @@ export default function Card(props) {
       shadowOpacity={1}
       shadowRadius={2}
       {...props}
-      style={[cs.card, props.style]}
+      style={[styles, props.style]}
     >
       {props.children}
     </View>

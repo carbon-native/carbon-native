@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text, Platform } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -26,16 +16,24 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({
+  ...Platform.select({
+    ios: {
+      fontSize: 17,
+    },
+    android: {
+      fontSize: 20,
+    },
+  }),
+  fontWeight: '600',
+});
+
 export default function ToolbarTitle(props) {
-  const color = (props.color) ? (props.color) : null;
+  const color = props.color ? props.color : null;
   return (
-    <Text
-      {...props}
-      style={[
-        cs.toolbarTitle,
-        color && cs[color],
-      ]}
-    >
+    <Text {...props} style={[styles, color && cs[color]]}>
       {props.children}
     </Text>
   );

@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from './styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -24,12 +14,13 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({ flex: 1 });
+
 export default function Container(props) {
   return (
-    <View
-      {...props}
-      style={[cs.container, props.padding && cs.padding, props.style]}
-    >
+    <View {...props} style={[styles, props.padding && cs.padding, props.style]}>
       {props.children}
     </View>
   );

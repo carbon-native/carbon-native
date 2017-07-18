@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -23,16 +13,18 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({
+  flex: 1,
+  marginVertical: 12,
+  fontSize: 14,
+  fontWeight: '600',
+});
+
 export default function ItemHeaderText(props) {
   return (
-    <Text
-      {...props}
-      style={[
-        cs.itemText,
-        cs.itemHeaderText,
-        props.style,
-      ]}
-    >
+    <Text {...props} style={[styles, props.style]}>
       {props.children}
     </Text>
   );

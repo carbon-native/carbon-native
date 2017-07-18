@@ -1,17 +1,6 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text } from 'react-native';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -24,12 +13,15 @@ const propTypes = {
 
 const defaultProps = {};
 
+const styles = StyleSheet.create({
+  marginBottom: 10,
+  fontSize: 30,
+  fontWeight: '500',
+});
+
 export default function H2(props) {
   return (
-    <Text
-      {...props}
-      style={[cs.h2, props.style]}
-    >
+    <Text {...props} style={[styles, props.style]}>
       {props.children}
     </Text>
   );

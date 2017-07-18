@@ -1,18 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  ScrollView,
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import { carbonStyles } from './styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -28,23 +17,21 @@ const defaultProps = {
   scroll: true,
 };
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({ flex: 1 });
+
 export default function Content(props) {
-  const contentStyle = [cs.container, props.padding && cs.padding, props.style];
+  const contentStyle = [styles, props.padding && cs.padding, props.style];
   if (props.scroll === true) {
     return (
-      <ScrollView
-        {...props}
-        style={contentStyle}
-      >
+      <ScrollView {...props} style={contentStyle}>
         {props.children}
       </ScrollView>
     );
   }
   return (
-    <View
-      {...props}
-      style={contentStyle}
-    >
+    <View {...props} style={contentStyle}>
       {props.children}
     </View>
   );

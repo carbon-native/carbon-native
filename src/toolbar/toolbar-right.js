@@ -1,17 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const propTypes = {
   children: PropTypes.oneOfType([
@@ -26,16 +16,19 @@ const propTypes = {
 
 const defaultProps = {};
 
+const cs = StyleSheet.create(carbonStyles);
+
+const styles = StyleSheet.create({
+  flexDirection: 'row',
+  justifyContent: 'flex-end',
+  overflow: 'hidden',
+  paddingVertical: 8,
+  paddingLeft: 6,
+});
+
 export default function ToolbarRight(props) {
   return (
-    <View
-      {...props}
-      style={[
-        cs.container,
-        cs.toolbarRight,
-        props.style,
-      ]}
-    >
+    <View {...props} style={[cs.container, styles, props.style]}>
       {props.children}
     </View>
   );
