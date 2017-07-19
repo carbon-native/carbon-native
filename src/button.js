@@ -114,7 +114,6 @@ export default class Button extends Component {
     const clear = this.props.clear ? 'clear' : null;
     const outline = this.props.outline ? 'outline' : null;
     const color = this.props.color || null;
-
     const bgColor = color && !outline ? `${color}Bg` : 'transparent';
     const bgActiveColor = color ? `${color}Active` : null;
     const textSize = this.props.size

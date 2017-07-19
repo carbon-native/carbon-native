@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
 
 export default function ToolbarTitle(props) {
   const color = props.color ? props.color : null;
+
   return (
     <Text {...props} style={[styles, color && cs[color]]}>
       {props.children}

@@ -14,6 +14,7 @@ const defaultProps = {
 
 export default function Toggle(props) {
   const color = colors[props.color];
+
   return (
     <Switch
       tintColor={'#E5E5E5'}

@@ -38,10 +38,6 @@ export const carbonStyles = {
   itemLast: {
     borderBottomWidth: 0,
   },
-  note: {
-    fontSize: 14,
-    color: '#AEACB4',
-  },
   itemHeader: {
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderBottomColor: '#CDCDCD',

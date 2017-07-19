@@ -19,31 +19,32 @@ const defaultProps = {};
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  toolbar: {
+  base: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     height: 44,
   },
-  toolbarHeader: {
+  header: {
     paddingTop: 20,
     height: 64,
   },
-  toolbarFooter: {
+  footer: {
     // stuff
   },
 });
 
 export default function Toolbar(props) {
-  const header = props.header ? 'toolbarHeader' : null;
-  const footer = props.footer ? 'toolbarFooter' : null;
+  const header = props.header ? 'header' : null;
+  const footer = props.footer ? 'footer' : null;
   const color = props.color ? props.color : null;
   const bgColor = color ? `${color}Bg` : null;
+
   return (
     <View
       {...props}
       style={[
-        styles.toolbar,
+        styles.base,
         header && styles[header],
         footer && styles[footer],
         bgColor && cs[bgColor],

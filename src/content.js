@@ -23,6 +23,7 @@ const styles = StyleSheet.create({ flex: 1 });
 
 export default function Content(props) {
   const contentStyle = [styles, props.padding && cs.padding, props.style];
+
   if (props.scroll === true) {
     return (
       <ScrollView {...props} style={contentStyle}>

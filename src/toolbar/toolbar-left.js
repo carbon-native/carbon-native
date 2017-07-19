@@ -19,6 +19,7 @@ const defaultProps = {};
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
+  flex: 1,
   flexDirection: 'row',
   justifyContent: 'flex-start',
   overflow: 'hidden',
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
 
 export default function ToolbarLeft(props) {
   return (
-    <View {...props} style={[cs.container, styles, props.style]}>
+    <View {...props} style={[styles, props.style]}>
       {props.children}
     </View>
   );

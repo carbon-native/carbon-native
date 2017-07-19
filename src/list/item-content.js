@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
 
 export default function ItemContent(props) {
   const itemNoLine = !props.line;
+
   return (
     <View
       {...props}

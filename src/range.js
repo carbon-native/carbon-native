@@ -1,14 +1,7 @@
-import React, {
-  PropTypes,
-} from 'react';
-
-import {
-  Slider,
-} from 'react-native';
-
-import {
-  colors,
-} from './styles';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Slider } from 'react-native';
+import { colors } from './styles';
 
 const propTypes = {
   color: PropTypes.string,
@@ -21,12 +14,8 @@ const defaultProps = {
 
 export default function Toggle(props) {
   // const color = colors[props.color];
-  return (
-    <Slider
-      {...props}
-      style={[props.style]}
-    />
-  );
+
+  return <Slider {...props} style={[props.style]} />;
 }
 
 Toggle.propTypes = propTypes;
