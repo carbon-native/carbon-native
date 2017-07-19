@@ -1,0 +1,22 @@
+{
+  "BadgesDemo": [],
+  "BarsDemo": [],
+  "ButtonsDemo": [],
+  "CardsDemo": [],
+  "ListsDemo": [],
+  "ToggleDemo": [
+    { "name": "frodo", "color": "", "active": true },
+    { "name": "sam", "color": "", "active": false },
+    { "name": "eowyn", "color": "", "active": true },
+    { "name": "legolas", "color": "", "active": true },
+    { "name": "gimli", "color": "", "active": false },
+    { "name": "saruman", "color": "", "active": true },
+    { "name": "gandalf", "color": "", "active": true },
+    { "name": "arwen", "color": "", "active": false },
+    { "name": "treebeard", "color": "", "active": true },
+    { "name": "boromir", "color": "", "active": false },
+    { "name": "gollum", "color": "", "active": true },
+    { "name": "galadriel", "color": "", "active": false }
+  ],
+  "TypographyDemo": []
+}
