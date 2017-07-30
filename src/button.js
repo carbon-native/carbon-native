@@ -9,22 +9,6 @@ import {
 } from 'react-native';
 import { carbonStyles, colors } from './styles';
 
-const propTypes = {
-  children: PropTypes.node,
-  text: PropTypes.string,
-  size: PropTypes.string,
-  full: PropTypes.bool,
-  round: PropTypes.bool,
-  clear: PropTypes.bool,
-  outline: PropTypes.bool,
-  color: PropTypes.string,
-  style: PropTypes.any,
-};
-
-const defaultProps = {
-  color: 'stable',
-};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -186,5 +170,17 @@ export default class Button extends Component {
   }
 }
 
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
+Button.propTypes = {
+  children: PropTypes.node,
+  text: PropTypes.string,
+  size: PropTypes.string,
+  full: PropTypes.bool,
+  round: PropTypes.bool,
+  clear: PropTypes.bool,
+  outline: PropTypes.bool,
+  color: PropTypes.string,
+  style: PropTypes.any,
+};
+Button.defaultProps = {
+  color: 'stable',
+};

@@ -3,17 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, TouchableHighlight, View } from 'react-native';
 import { carbonStyles } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  onPress: PropTypes.func,
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -47,5 +36,12 @@ export default function Item(props) {
   );
 }
 
-Item.propTypes = propTypes;
-Item.defaultProps = defaultProps;
+Item.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  onPress: PropTypes.func,
+  style: PropTypes.any,
+};
+Item.defaultProps = {};

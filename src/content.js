@@ -3,20 +3,6 @@ import PropTypes from 'prop-types';
 import { ScrollView, StyleSheet, View } from 'react-native';
 import { carbonStyles } from './styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  padding: PropTypes.bool,
-  scroll: PropTypes.bool,
-  style: PropTypes.any,
-};
-
-const defaultProps = {
-  scroll: true,
-};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({ flex: 1 });
@@ -38,5 +24,15 @@ export default function Content(props) {
   );
 }
 
-Content.propTypes = propTypes;
-Content.defaultProps = defaultProps;
+Content.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  padding: PropTypes.bool,
+  scroll: PropTypes.bool,
+  style: PropTypes.any,
+};
+Content.defaultProps = {
+  scroll: true,
+};

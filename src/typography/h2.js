@@ -2,17 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.string,
-  ]),
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const styles = StyleSheet.create({
   marginBottom: 10,
   fontSize: 30,
@@ -27,5 +16,12 @@ export default function H2(props) {
   );
 }
 
-H2.propTypes = propTypes;
-H2.defaultProps = defaultProps;
+H2.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  style: PropTypes.any,
+};
+H2.defaultProps = {};

@@ -3,17 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 import { carbonStyles } from './styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  padding: PropTypes.bool,
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({ flex: 1 });
@@ -26,5 +15,12 @@ export default function Container(props) {
   );
 }
 
-Container.propTypes = propTypes;
-Container.defaultProps = defaultProps;
+Container.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  padding: PropTypes.bool,
+  style: PropTypes.any,
+};
+Container.defaultProps = {};

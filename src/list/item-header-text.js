@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 import { carbonStyles } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -30,5 +20,11 @@ export default function ItemHeaderText(props) {
   );
 }
 
-ItemHeaderText.propTypes = propTypes;
-ItemHeaderText.defaultProps = defaultProps;
+ItemHeaderText.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  style: PropTypes.any,
+};
+ItemHeaderText.defaultProps = {};

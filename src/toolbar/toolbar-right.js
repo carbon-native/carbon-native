@@ -3,19 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 import { carbonStyles } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  color: PropTypes.number,
-  footer: PropTypes.bool,
-  header: PropTypes.bool,
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -35,5 +22,14 @@ export default function ToolbarRight(props) {
   );
 }
 
-ToolbarRight.propTypes = propTypes;
-ToolbarRight.defaultProps = defaultProps;
+ToolbarRight.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  color: PropTypes.number,
+  footer: PropTypes.bool,
+  header: PropTypes.bool,
+  style: PropTypes.any,
+};
+ToolbarRight.defaultProps = {};

@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
 import { carbonStyles } from './styles';
 
-const propTypes = {
-  color: PropTypes.string,
-  style: PropTypes.any,
-  text: PropTypes.string,
-};
-
-const defaultProps = {
-  color: 'stable',
-};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -43,5 +33,11 @@ export default function Badge(props) {
   );
 }
 
-Badge.propTypes = propTypes;
-Badge.defaultProps = defaultProps;
+Badge.propTypes = {
+  color: PropTypes.string,
+  style: PropTypes.any,
+  text: PropTypes.string,
+};
+Badge.defaultProps = {
+  color: 'stable',
+};

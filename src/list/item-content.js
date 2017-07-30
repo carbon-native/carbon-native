@@ -3,19 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 import { carbonStyles } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  line: PropTypes.bool,
-  style: PropTypes.any,
-};
-
-const defaultProps = {
-  line: true,
-};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -46,5 +33,14 @@ export default function ItemContent(props) {
   );
 }
 
-ItemContent.propTypes = propTypes;
-ItemContent.defaultProps = defaultProps;
+ItemContent.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  line: PropTypes.bool,
+  style: PropTypes.any,
+};
+ItemContent.defaultProps = {
+  line: true,
+};

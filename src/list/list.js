@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
 import { carbonStyles } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
@@ -30,5 +20,11 @@ export default function List(props) {
   );
 }
 
-List.propTypes = propTypes;
-List.defaultProps = defaultProps;
+List.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  style: PropTypes.any,
+};
+List.defaultProps = {};

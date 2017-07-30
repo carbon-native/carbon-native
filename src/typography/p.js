@@ -2,17 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.string,
-  ]),
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const styles = StyleSheet.create({
   flexWrap: 'wrap',
   flexDirection: 'row',
@@ -27,5 +16,12 @@ export default function P(props) {
   );
 }
 
-P.propTypes = propTypes;
-P.defaultProps = defaultProps;
+P.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  style: PropTypes.any,
+};
+P.defaultProps = {};

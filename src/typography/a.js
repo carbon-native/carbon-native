@@ -3,17 +3,6 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 import { colors } from '../styles';
 
-const propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-    PropTypes.string,
-  ]),
-  style: PropTypes.any,
-};
-
-const defaultProps = {};
-
 const styles = StyleSheet.create({
   color: colors.primary,
 });
@@ -26,5 +15,12 @@ export default function A(props) {
   );
 }
 
-A.propTypes = propTypes;
-A.defaultProps = defaultProps;
+A.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
+  style: PropTypes.any,
+};
+A.defaultProps = {};
