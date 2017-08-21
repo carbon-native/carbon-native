@@ -103,14 +103,14 @@ export const carbonStyles = {
   },
   toolbarTitle: {
     fontWeight: '600',
-    // ...Platform.select({
-    //   ios: {
-    //     fontSize: 17,
-    //   },
-    //   android: {
-    //     fontSize: 20,
-    //   },
-    // }),
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 20,
+      },
+    }),
   },
   toolbarLeft: {
     flexDirection: 'row',

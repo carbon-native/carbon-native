@@ -933,6 +933,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.carbonStyles = exports.colors = undefined;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _reactNative = require('react-native');
 
 // colors
@@ -1033,17 +1035,16 @@ var carbonStyles = exports.carbonStyles = {
   toolbarFooter: {
     // stuff
   },
-  toolbarTitle: {
+  toolbarTitle: _extends({
     fontWeight: '600'
-    // ...Platform.select({
-    //   ios: {
-    //     fontSize: 17,
-    //   },
-    //   android: {
-    //     fontSize: 20,
-    //   },
-    // }),
-  },
+  }, _reactNative.Platform.select({
+    ios: {
+      fontSize: 17
+    },
+    android: {
+      fontSize: 20
+    }
+  })),
   toolbarLeft: {
     flexDirection: 'row',
     justifyContent: 'flex-start',

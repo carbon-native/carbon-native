@@ -3,3 +3,6 @@ publish.sh
 src
 .babelrc
 kitchen-sink
+package-lock.json
+.DS_Store
+npm-debug.log

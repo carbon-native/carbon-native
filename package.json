@@ -14,13 +14,13 @@
     }
   ],
   "scripts": {
-    "clean": "rimraf lib/*",
-    "dev": "babel ./src --watch --out-file ./lib/index.js",
-    "build": "npm run clean && babel ./src --out-file ./lib/index.js && cp ./package.json lib",
+    "clean": "rimraf dist && mkdir dist",
+    "build": "npm run clean && babel ./src --out-file ./dist/index.js",
+    "dev": "npm run build && babel ./src --watch --out-file ./dist/index.js",
     "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/carbon-native/carbon-native"
@@ -40,6 +40,7 @@
     "babel-eslint": "^5.0.4",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "es2015": "0.0.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^6.2.0",
