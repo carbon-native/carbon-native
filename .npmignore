@@ -3,6 +3,5 @@
 .eslintrc
 kitchen-sink
 npm-debug.log
-package-lock.json
 publish.sh
 src
