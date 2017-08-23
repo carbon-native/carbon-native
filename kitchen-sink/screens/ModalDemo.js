@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Modal, StyleSheet } from "react-native";
+import { Modal, StyleSheet } from 'react-native';
 
 import {
   carbonStyles,
@@ -12,8 +12,8 @@ import {
   Item,
   ItemContent,
   ItemText,
-  List
-} from "carbon-native";
+  List,
+} from 'carbon-native';
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -23,7 +23,7 @@ export default class ModalDemo extends React.Component {
     this.state = {
       modalVisible: false,
       transparent: false,
-      animationType: "slide"
+      animationType: 'slide',
     };
     this.toggleModal = this.toggleModal.bind(this);
   }

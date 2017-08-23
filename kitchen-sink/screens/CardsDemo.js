@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyleSheet, Text } from "react-native";
+import { StyleSheet, Text } from 'react-native';
 
 import {
   carbonStyles,
@@ -12,10 +12,10 @@ import {
   Item,
   ItemContent,
   ItemText,
-  ItemIcon
-} from "carbon-native";
+  ItemIcon,
+} from 'carbon-native';
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: "center"
-  }
+    textAlign: 'center',
+  },
 });
 
 export default function CardsDemo() {

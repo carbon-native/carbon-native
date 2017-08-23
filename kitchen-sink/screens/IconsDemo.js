@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View } from 'react-native';
 
-import { carbonStyles, Content } from "carbon-native";
+import { carbonStyles, Content } from 'carbon-native';
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-around",
-    marginVertical: 10
-  }
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginVertical: 10,
+  },
 });
 
 export default function IconsDemo() {

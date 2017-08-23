@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-  Container,
-  Toolbar,
-  ToolbarTitle,
-  Content,
-} from 'carbon-native';
+import { Container, Toolbar, ToolbarTitle, Content } from 'carbon-native';
 
 export default function ToolbarsDemo() {
   return (

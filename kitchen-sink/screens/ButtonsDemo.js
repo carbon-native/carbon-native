@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View } from 'react-native';
 
-import { carbonStyles, H3, Content, Button } from "carbon-native";
+import { carbonStyles, H3, Content, Button } from 'carbon-native';
 
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: "center"
-  }
+    textAlign: 'center',
+  },
 });
 
 export default function ButtonsDemo() {

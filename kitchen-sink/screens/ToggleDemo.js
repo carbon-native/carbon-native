@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 import {
   carbonStyles,
@@ -10,8 +10,8 @@ import {
   ItemContent,
   ItemText,
   ItemHeaderText,
-  Toggle
-} from "carbon-native";
+  Toggle,
+} from 'carbon-native';
 const cs = StyleSheet.create(carbonStyles);
 
 export default class ToggleDemo extends React.Component {
@@ -29,7 +29,7 @@ export default class ToggleDemo extends React.Component {
       treebeard: true,
       boromir: false,
       gollum: true,
-      galadriel: false
+      galadriel: false,
     };
   }
 
