@@ -9,14 +9,13 @@ The following is a set of guidelines for contributing to Carbon Native and its p
 We use the Kitchen Sink as our test app as we create new or update existing components. Every pull request should contain not only the updated src code but also the corresponding changes to the Kitchen Sink application bundled with this repository.
 
 ```bash
-npm install
-cd kitchen-sink
-npm install
+./setup.sh
 ```
 
 ## Develop
 
 ```bash
+# Run in root project folder
 npm start
 
 # In a seperate terminal window
