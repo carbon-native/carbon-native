@@ -1,9 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
+import { StyleSheet, Text } from "react-native";
 
 import {
   carbonStyles,
@@ -15,10 +12,10 @@ import {
   Item,
   ItemContent,
   ItemText,
-  ItemIcon,
-} from 'carbon-native';
+  ItemIcon
+} from "carbon-native";
 
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -26,22 +23,26 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: 'center',
-  },
+    textAlign: "center"
+  }
 });
 
 export default function CardsDemo() {
   return (
     <Content style={cs.paddingLg}>
       <Card style={cs.paddingLg}>
-        <Text>This is just your basic card with some text to boot. Like it? Keep scrolling...</Text>
+        <Text>
+          This is just your basic card with some text to boot. Like it? Keep
+          scrolling...
+        </Text>
       </Card>
 
       <H3 style={styles.sectionHeader}>Card Headers</H3>
       <Card style={cs.paddingLg}>
         <H4>Header</H4>
         <Text>
-          Just some text rambling on about card headers, the value they provide, and blah blah blah
+          Just some text rambling on about card headers, the value they provide,
+          and blah blah blah
         </Text>
       </Card>
 

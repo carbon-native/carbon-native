@@ -1,6 +1,4 @@
-import React, {
-  Component,
-} from 'react';
+import React from "react";
 
 import {
   Platform,
@@ -8,19 +6,17 @@ import {
   View,
   Text,
   AlertIOS,
-  Alert,
-} from 'react-native';
+  Alert
+} from "react-native";
 
-import {
-  carbonStyles,
-  Content,
-  Button,
-} from 'carbon-native';
+import { carbonStyles, Content, Button } from "carbon-native";
 
 const cs = StyleSheet.create(carbonStyles);
 
-const alertMessage = 'Your friend, Elon Musk, just accepted your friend request!';
-const confirmMessage = 'Do you agree to build something awesome with Carbon Native?';
+const alertMessage =
+  "Your friend, Elon Musk, just accepted your friend request!";
+const confirmMessage =
+  "Do you agree to build something awesome with Carbon Native?";
 
 export default function AlertsDemo() {
   return (
@@ -31,17 +27,14 @@ export default function AlertsDemo() {
   );
 }
 
-function SimpleAlertExampleBlock() {
+export function SimpleAlertExampleBlock() {
   return (
     <View>
       <View style={cs.marginBottom}>
         <Button
           color="secondary"
           text="Show Basic Alert"
-          onPress={() => Alert.alert(
-            'Alert Title',
-            alertMessage
-          )}
+          onPress={() => Alert.alert("Alert Title", alertMessage)}
         />
       </View>
 
@@ -49,27 +42,23 @@ function SimpleAlertExampleBlock() {
         <Button
           color="secondary"
           text="Show Confirm Alert"
-          onPress={() => Alert.alert(
-            'Alert Title',
-            confirmMessage,
-            [
-              { text: 'Disagree' },
-              { text: 'Agree' },
-            ]
-          )}
+          onPress={() =>
+            Alert.alert("Alert Title", confirmMessage, [
+              { text: "Disagree" },
+              { text: "Agree" }
+            ])}
         />
       </View>
     </View>
   );
 }
 
-class PromptOptions extends Component {
-
+export class PromptOptions extends React.Component {
   constructor(props) {
     super(props);
     this.saveResponse = this.saveResponse.bind(this);
     this.state = {
-      promptValue: undefined,
+      promptValue: undefined
     };
   }
 
@@ -78,7 +67,7 @@ class PromptOptions extends Component {
   }
 
   render() {
-    if (Platform.OS !== 'ios') {
+    if (Platform.OS !== "ios") {
       return null;
     }
     return (
@@ -87,11 +76,14 @@ class PromptOptions extends Component {
           <Button
             color="secondary"
             text="Show Prompt Alert"
-            onPress={() => AlertIOS.prompt('Type a value', null, this.saveResponse)}
+            onPress={() =>
+              AlertIOS.prompt("Type a value", null, this.saveResponse)}
           />
         </View>
 
-        <Text>Prompt value: {this.state.promptValue}</Text>
+        <Text>
+          Prompt value: {this.state.promptValue}
+        </Text>
       </View>
     );
   }

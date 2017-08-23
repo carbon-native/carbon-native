@@ -1,28 +1,15 @@
-import React, {
-  Component,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-  Content,
-  Range,
-} from 'carbon-native';
-
-import Icon from 'react-native-vector-icons/FontAwesome';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { carbonStyles, Content, Range } from "carbon-native";
+import Icon from "react-native-vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 
-class RangeExample extends Component {
-
+export class RangeExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 0.5,
+      value: 0.5
     };
   }
 
@@ -32,7 +19,7 @@ class RangeExample extends Component {
         <Range
           {...this.props}
           value={this.state.value}
-          onValueChange={(value) => this.setState({ value })}
+          onValueChange={value => this.setState({ value })}
         />
       </View>
     );
@@ -42,35 +29,25 @@ class RangeExample extends Component {
 export default function RangeDemo() {
   return (
     <Content padding>
-      <View style={[cs.row, cs.padding, { alignItems: 'center' }]}>
+      <View style={[cs.row, cs.padding, { alignItems: "center" }]}>
         <Icon name="volume-down" size={24} />
         <RangeExample />
         <Icon name="volume-up" size={24} />
       </View>
 
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.secondary.color}
-      />
+      <RangeExample minimumTrackTintColor={carbonStyles.secondary.color} />
+
+      <RangeExample minimumTrackTintColor={carbonStyles.danger.color} />
+
+      <RangeExample minimumTrackTintColor={carbonStyles.royal.color} />
+
+      <RangeExample minimumTrackTintColor={carbonStyles.energized.color} />
+
+      <RangeExample minimumTrackTintColor={carbonStyles.calm.color} />
 
       <RangeExample
-        minimumTrackTintColor={carbonStyles.danger.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.royal.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.energized.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.calm.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={'red'}
-        maximumTrackTintColor={'green'}
+        minimumTrackTintColor={"red"}
+        maximumTrackTintColor={"green"}
       />
     </Content>
   );

@@ -1,8 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import {
-  StyleSheet,
-} from 'react-native';
+import { StyleSheet } from "react-native";
 
 import {
   carbonStyles,
@@ -11,8 +9,8 @@ import {
   Item,
   ItemContent,
   ItemText,
-  Badge,
-} from 'carbon-native';
+  Badge
+} from "carbon-native";
 const cs = StyleSheet.create(carbonStyles);
 
 export default function BadgesDemo() {

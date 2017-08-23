@@ -1,38 +1,28 @@
-import React from 'react';
-
-import {
-  StyleSheet,
-  View,
-  Text,
-} from 'react-native';
-
-import {
-  // carbonStyles,
-  Content,
-} from 'carbon-native';
-// const cs = StyleSheet.create(carbonStyles);
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
+import { Content } from "carbon-native";
 
 const styles = StyleSheet.create({
   gridRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    justifyContent: "space-around",
     paddingHorizontal: 4,
-    paddingVertical: 8,
+    paddingVertical: 8
   },
   gridCol: {
     flex: 1,
-    padding: 8,
+    padding: 8
   },
   colDemo: {
     flex: 1,
     padding: 8,
     borderWidth: 1,
-    borderColor: '#DDDDDD',
-    backgroundColor: '#F7F7F7',
+    borderColor: "#DDDDDD",
+    backgroundColor: "#F7F7F7"
   },
   colDemoText: {
-    textAlign: 'center',
-  },
+    textAlign: "center"
+  }
 });
 
 export default function GridDemo() {
