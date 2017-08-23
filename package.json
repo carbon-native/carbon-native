@@ -18,7 +18,14 @@
     "build": "npm run clean && babel ./src --out-file ./index.js",
     "start": "npm run build && babel ./src --watch --out-file ./index.js",
     "prepare": "npm run build",
+    "precommit": "lint-staged",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "prettier --write --single-quote --trailing-comma es5",
+      "git add"
+    ]
   },
   "main": "index.js",
   "repository": {
@@ -38,6 +45,8 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-react-native": "^3.0.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
     "rimraf": "^2.6.1"
   },
   "license": "MIT",
