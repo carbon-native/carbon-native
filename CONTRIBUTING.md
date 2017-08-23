@@ -23,6 +23,12 @@ cd kitchen-sink
 npm start
 ```
 
+## Test
+
+```bash
+npm test
+```
+
 ## Deploy
 
 To deploy Carbon Native we use a shell script that ultimetely just publishes to NPM. Only specified organizations admins should have access to publish on NPM.
