@@ -57,5 +57,7 @@
     "rimraf": "^2.6.1"
   },
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "prettier": "^1.5.3"
+  }
 }
