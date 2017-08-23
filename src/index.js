@@ -28,10 +28,7 @@ import ItemText from './list/item-text';
 import Item from './list/item';
 import List from './list/list';
 
-export {
-  carbonStyles,
-  colors,
-} from './styles';
+export { carbonStyles, colors } from './styles';
 
 export { H1 };
 export { H2 };
