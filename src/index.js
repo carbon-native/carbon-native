@@ -60,6 +60,8 @@ export { ItemHeaderText };
 export { ItemIcon };
 
 export default {
+  carbonStyles,
+  colors,
   H1,
   H2,
   H3,
