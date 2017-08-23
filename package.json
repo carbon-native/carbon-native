@@ -51,7 +51,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
     "babel-preset-react-native": "^3.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
