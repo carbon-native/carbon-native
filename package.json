@@ -14,8 +14,8 @@
     }
   ],
   "scripts": {
-    "clean": "rimraf index.js",
-    "build": "npm run clean && babel ./src --out-file ./index.js",
+    "clean": "rimraf dist",
+    "build": "npm run clean && babel ./src --out-dir ./dist",
     "start": "npm run build && babel ./src --watch --out-file ./index.js",
     "prepare": "npm run build",
     "precommit": "lint-staged",
@@ -27,7 +27,7 @@
       "git add"
     ]
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/carbon-native/carbon-native"
@@ -35,16 +35,8 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "files": [
-    "LICENSE",
-    "PATENTS",
-    "README.md",
-    "index.js"
-  ],
-  "keywords": [
-    "react-native",
-    "ui"
-  ],
+  "files": ["LICENSE", "PATENTS", "README.md", "index.js"],
+  "keywords": ["react-native", "ui"],
   "peerDepenecies": {
     "react": ">=16.0.0-alpha.12",
     "react-native": ">=0.47.2"
