@@ -3,7 +3,8 @@
   "version": "0.0.6",
   "description": "A set of UI components for building React Native apps.",
   "author": "",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Tyler Buchea",
       "email": "tyler@buchea.com"
     },

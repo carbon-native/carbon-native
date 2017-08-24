@@ -20,5 +20,5 @@ if [ "$yesno" == "yes" ] ; then
     git commit -m ":tada: New release $version"
     git tag -a $version -m "$version"
     git push --follow-tags
-    npm publish lib
+    npm publish
 fi
