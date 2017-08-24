@@ -35,7 +35,7 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "files": ["LICENSE", "PATENTS", "README.md", "index.js"],
+  "files": ["LICENSE", "PATENTS", "README.md", "index.js", "dist"],
   "keywords": ["react-native", "ui"],
   "peerDepenecies": {
     "react": ">=16.0.0-alpha.12",
