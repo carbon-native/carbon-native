@@ -1,16 +1,6 @@
 import React from 'react';
-
-import {
-  StyleSheet,
-  View,
-  Text,
-} from 'react-native';
-
-import {
-  // carbonStyles,
-  Content,
-} from 'carbon-native';
-// const cs = StyleSheet.create(carbonStyles);
+import { StyleSheet, View, Text } from 'react-native';
+import { Content } from 'carbon-native';
 
 const styles = StyleSheet.create({
   gridRow: {

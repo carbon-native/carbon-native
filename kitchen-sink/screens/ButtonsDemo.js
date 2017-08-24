@@ -1,16 +1,8 @@
 import React from 'react';
 
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import {
-  carbonStyles,
-  H3,
-  Content,
-  Button,
-} from 'carbon-native';
+import { carbonStyles, H3, Content, Button } from 'carbon-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -48,16 +40,36 @@ export default function ButtonsDemo() {
       <H3 style={styles.sectionHeader}>Outline</H3>
       <View style={cs.padding}>
         <View style={cs.p}>
-          <Button color="stable" text="Stable Outline" onPress={() => {}} outline />
+          <Button
+            color="stable"
+            text="Stable Outline"
+            onPress={() => {}}
+            outline
+          />
         </View>
         <View style={cs.p}>
-          <Button color="primary" text="Primary Outline" onPress={() => {}} outline />
+          <Button
+            color="primary"
+            text="Primary Outline"
+            onPress={() => {}}
+            outline
+          />
         </View>
         <View style={cs.p}>
-          <Button color="secondary" text="Secondary Outline" onPress={() => {}} outline />
+          <Button
+            color="secondary"
+            text="Secondary Outline"
+            onPress={() => {}}
+            outline
+          />
         </View>
         <View style={cs.p}>
-          <Button color="danger" text="Danger Outline" onPress={() => {}} outline />
+          <Button
+            color="danger"
+            text="Danger Outline"
+            onPress={() => {}}
+            outline
+          />
         </View>
         <View style={cs.p}>
           <Button color="dark" text="Dark Outline" onPress={() => {}} outline />
@@ -70,10 +82,20 @@ export default function ButtonsDemo() {
           <Button color="stable" text="Stable Clear" onPress={() => {}} clear />
         </View>
         <View style={cs.p}>
-          <Button color="primary" text="Primary Clear" onPress={() => {}} clear />
+          <Button
+            color="primary"
+            text="Primary Clear"
+            onPress={() => {}}
+            clear
+          />
         </View>
         <View style={cs.p}>
-          <Button color="secondary" text="Secondary Clear" onPress={() => {}} clear />
+          <Button
+            color="secondary"
+            text="Secondary Clear"
+            onPress={() => {}}
+            clear
+          />
         </View>
         <View style={cs.p}>
           <Button color="danger" text="Danger Clear" onPress={() => {}} clear />
@@ -89,10 +111,20 @@ export default function ButtonsDemo() {
           <Button color="stable" text="Stable Round" onPress={() => {}} round />
         </View>
         <View style={cs.p}>
-          <Button color="primary" text="Primary Round" onPress={() => {}} round />
+          <Button
+            color="primary"
+            text="Primary Round"
+            onPress={() => {}}
+            round
+          />
         </View>
         <View style={cs.p}>
-          <Button color="secondary" text="Secondary Round" onPress={() => {}} round />
+          <Button
+            color="secondary"
+            text="Secondary Round"
+            onPress={() => {}}
+            round
+          />
         </View>
         <View style={cs.p}>
           <Button color="danger" text="Danger Round" onPress={() => {}} round />
@@ -130,7 +162,12 @@ export default function ButtonsDemo() {
           <Button color="primary" text="Primary Full" onPress={() => {}} full />
         </View>
         <View style={cs.marginBottom}>
-          <Button color="secondary" text="Secondary Full" onPress={() => {}} full />
+          <Button
+            color="secondary"
+            text="Secondary Full"
+            onPress={() => {}}
+            full
+          />
         </View>
         <View style={cs.marginBottom}>
           <Button color="danger" text="Danger Full" onPress={() => {}} full />
@@ -143,13 +180,27 @@ export default function ButtonsDemo() {
       <H3 style={styles.sectionHeader}>Sizes</H3>
       <View style={cs.padding}>
         <View style={cs.p}>
-          <Button color="stable" text="Stable Small" size="sm" onPress={() => {}} />
+          <Button
+            color="stable"
+            text="Stable Small"
+            size="sm"
+            onPress={() => {}}
+          />
         </View>
         <View style={cs.p}>
-          <Button color="primary" text="Primary Small" size="sm" onPress={() => {}} />
+          <Button
+            color="primary"
+            text="Primary Small"
+            size="sm"
+            onPress={() => {}}
+          />
         </View>
         <View style={cs.p}>
-          <Button color="secondary" text="Secondary Medium" onPress={() => {}} />
+          <Button
+            color="secondary"
+            text="Secondary Medium"
+            onPress={() => {}}
+          />
         </View>
         <View style={cs.p}>
           <Button color="danger" text="Danger Medium" onPress={() => {}} />

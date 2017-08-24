@@ -1,24 +1,11 @@
-import React, {
-  Component,
-} from 'react';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-  Content,
-  Range,
-} from 'carbon-native';
-
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles, Content, Range } from 'carbon-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);
 
-class RangeExample extends Component {
-
+export class RangeExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -32,7 +19,7 @@ class RangeExample extends Component {
         <Range
           {...this.props}
           value={this.state.value}
-          onValueChange={(value) => this.setState({ value })}
+          onValueChange={value => this.setState({ value })}
         />
       </View>
     );
@@ -48,25 +35,11 @@ export default function RangeDemo() {
         <Icon name="volume-up" size={24} />
       </View>
 
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.secondary.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.danger.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.royal.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.energized.color}
-      />
-
-      <RangeExample
-        minimumTrackTintColor={carbonStyles.calm.color}
-      />
+      <RangeExample minimumTrackTintColor={carbonStyles.secondary.color} />
+      <RangeExample minimumTrackTintColor={carbonStyles.danger.color} />
+      <RangeExample minimumTrackTintColor={carbonStyles.royal.color} />
+      <RangeExample minimumTrackTintColor={carbonStyles.energized.color} />
+      <RangeExample minimumTrackTintColor={carbonStyles.calm.color} />
 
       <RangeExample
         minimumTrackTintColor={'red'}

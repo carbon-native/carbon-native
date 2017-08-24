@@ -1,10 +1,6 @@
-import React, {
-  Component,
-} from 'react';
+import React from 'react';
 
-import {
-  StyleSheet,
-} from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import {
   carbonStyles,
@@ -18,7 +14,7 @@ import {
 } from 'carbon-native';
 const cs = StyleSheet.create(carbonStyles);
 
-export default class ToggleDemo extends Component {
+export default class ToggleDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,7 +48,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Frodo Baggins</ItemText>
               <Toggle
                 color="primary"
-                onValueChange={(value) => this.setState({ frodo: value })}
+                onValueChange={value => this.setState({ frodo: value })}
                 value={this.state.frodo}
               />
             </ItemContent>
@@ -63,7 +59,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Sam</ItemText>
               <Toggle
                 color="energized"
-                onValueChange={(value) => this.setState({ sam: value })}
+                onValueChange={value => this.setState({ sam: value })}
                 value={this.state.sam}
               />
             </ItemContent>
@@ -74,7 +70,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Eowyn</ItemText>
               <Toggle
                 color="danger"
-                onValueChange={(value) => this.setState({ eowyn: value })}
+                onValueChange={value => this.setState({ eowyn: value })}
                 value={this.state.eowyn}
               />
             </ItemContent>
@@ -85,7 +81,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Legolas</ItemText>
               <Toggle
                 color="royal"
-                onValueChange={(value) => this.setState({ legolas: value })}
+                onValueChange={value => this.setState({ legolas: value })}
                 value={this.state.legolas}
               />
             </ItemContent>
@@ -96,7 +92,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Gimli</ItemText>
               <Toggle
                 color="danger"
-                onValueChange={(value) => this.setState({ gimli: value })}
+                onValueChange={value => this.setState({ gimli: value })}
                 value={this.state.gimli}
               />
             </ItemContent>
@@ -107,7 +103,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Saruman</ItemText>
               <Toggle
                 color="dark"
-                onValueChange={(value) => this.setState({ saruman: value })}
+                onValueChange={value => this.setState({ saruman: value })}
                 value={this.state.saruman}
               />
             </ItemContent>
@@ -118,7 +114,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Gandalf</ItemText>
               <Toggle
                 color="energized"
-                onValueChange={(value) => this.setState({ gandalf: value })}
+                onValueChange={value => this.setState({ gandalf: value })}
                 value={this.state.gandalf}
               />
             </ItemContent>
@@ -129,7 +125,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Arwen</ItemText>
               <Toggle
                 color="royal"
-                onValueChange={(value) => this.setState({ arwen: value })}
+                onValueChange={value => this.setState({ arwen: value })}
                 value={this.state.arwen}
               />
             </ItemContent>
@@ -140,7 +136,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Treebeard</ItemText>
               <Toggle
                 color="secondary"
-                onValueChange={(value) => this.setState({ treebeard: value })}
+                onValueChange={value => this.setState({ treebeard: value })}
                 value={this.state.treebeard}
               />
             </ItemContent>
@@ -151,7 +147,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Boromir</ItemText>
               <Toggle
                 color="royal"
-                onValueChange={(value) => this.setState({ boromir: value })}
+                onValueChange={value => this.setState({ boromir: value })}
                 value={this.state.boromir}
               />
             </ItemContent>
@@ -162,7 +158,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Gollum</ItemText>
               <Toggle
                 color="dark"
-                onValueChange={(value) => this.setState({ gollum: value })}
+                onValueChange={value => this.setState({ gollum: value })}
                 value={this.state.gollum}
               />
             </ItemContent>
@@ -173,7 +169,7 @@ export default class ToggleDemo extends Component {
               <ItemText>Galadriel</ItemText>
               <Toggle
                 color="energized"
-                onValueChange={(value) => this.setState({ galadriel: value })}
+                onValueChange={value => this.setState({ galadriel: value })}
                 value={this.state.galadriel}
               />
             </ItemContent>

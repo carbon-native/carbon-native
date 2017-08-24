@@ -28,10 +28,9 @@ import ItemText from './list/item-text';
 import Item from './list/item';
 import List from './list/list';
 
-export {
-  carbonStyles,
-  colors,
-} from './styles';
+import { carbonStyles, colors } from './styles';
+
+export { carbonStyles, colors } from './styles';
 
 export { H1 };
 export { H2 };
@@ -61,6 +60,8 @@ export { ItemHeaderText };
 export { ItemIcon };
 
 export default {
+  carbonStyles,
+  colors,
   H1,
   H2,
   H3,

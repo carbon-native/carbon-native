@@ -1,11 +1,6 @@
-import React, {
-  Component,
-} from 'react';
+import React from 'react';
 
-import {
-  Modal,
-  StyleSheet,
-} from 'react-native';
+import { Modal, StyleSheet } from 'react-native';
 
 import {
   carbonStyles,
@@ -22,7 +17,7 @@ import {
 
 const cs = StyleSheet.create(carbonStyles);
 
-export default class ModalDemo extends Component {
+export default class ModalDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,11 +35,7 @@ export default class ModalDemo extends Component {
   render() {
     return (
       <Content padding>
-        <Button
-          color="primary"
-          text="Press me!"
-          onPress={this.toggleModal}
-        />
+        <Button color="primary" text="Press me!" onPress={this.toggleModal} />
         <Modal
           animationType={this.state.animationType}
           transparent={this.state.transparent}
@@ -75,10 +66,7 @@ export default class ModalDemo extends Component {
               </Item>
             </List>
             <Container padding>
-              <Button
-                color="stable"
-                onPress={this.toggleModal}
-              >
+              <Button color="stable" onPress={this.toggleModal}>
                 Close
               </Button>
             </Container>
