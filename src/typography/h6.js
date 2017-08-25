@@ -1,19 +1,22 @@
-import React, {
-  PropTypes,
-} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StyleSheet, Text } from 'react-native';
 
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
+const styles = StyleSheet.create({
+  marginBottom: 10,
+  fontSize: 12,
+  fontWeight: '500',
+});
 
-import {
-  carbonStyles,
-} from '../styles';
+export default function H6(props) {
+  return (
+    <Text {...props} style={[styles, props.style]}>
+      {props.children}
+    </Text>
+  );
+}
 
-const cs = StyleSheet.create(carbonStyles);
-
-const propTypes = {
+H6.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -21,19 +24,4 @@ const propTypes = {
   ]),
   style: PropTypes.any,
 };
-
-const defaultProps = {};
-
-export default function H6(props) {
-  return (
-    <Text
-      {...props}
-      style={[cs.h6, props.style]}
-    >
-      {props.children}
-    </Text>
-  );
-}
-
-H6.propTypes = propTypes;
-H6.defaultProps = defaultProps;
+H6.defaultProps = {};

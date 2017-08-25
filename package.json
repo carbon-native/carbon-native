@@ -3,8 +3,7 @@
   "version": "0.0.6",
   "description": "A set of UI components for building React Native apps.",
   "author": "",
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Tyler Buchea",
       "email": "tyler@buchea.com"
     },
@@ -51,6 +50,7 @@
     "jest": "^20.0.4",
     "lint-staged": "^4.0.3",
     "prettier": "^1.5.3",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.12",
     "react-native": "0.47.2",
     "react-test-renderer": "^15.6.1",
