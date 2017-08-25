@@ -47,7 +47,9 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.3",
     "prettier": "^1.5.3",
-    "rimraf": "^2.6.1"
+    "rimraf": "^2.6.1",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.47.2"
   },
   "license": "MIT",
   "dependencies": {}
