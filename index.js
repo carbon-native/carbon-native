@@ -3,5 +3,6 @@
 if (process.env.NODE_ENV === 'production') {
   module.exports = require('./dist/index.js');
 } else {
-  module.exports = require('./dist/index.js');
+  console.log('NOW SERVING CARBON NATIVE DEVELOPMENT PACKAGE!');
+  module.exports = require('./src/index.js');
 }
