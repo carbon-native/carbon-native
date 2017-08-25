@@ -19,7 +19,10 @@
     "start": "npm run build && babel ./src --watch --out-dir ./dist",
     "prepare": "npm run build",
     "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native"
   },
   "lint-staged": {
     "src/*.js": [
@@ -35,16 +38,8 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js",
-    "dist"
-  ],
-  "keywords": [
-    "react-native",
-    "ui"
-  ],
+  "files": ["LICENSE", "README.md", "index.js", "dist"],
+  "keywords": ["react-native", "ui"],
   "peerDepenecies": {
     "react": ">=16.0.0-alpha.12",
     "react-native": ">=0.47.2"
@@ -53,11 +48,13 @@
     "babel-cli": "^6.26.0",
     "babel-preset-react-native": "^3.0.1",
     "husky": "^0.14.3",
+    "jest": "^20.0.4",
     "lint-staged": "^4.0.3",
     "prettier": "^1.5.3",
-    "rimraf": "^2.6.1",
     "react": "16.0.0-alpha.12",
-    "react-native": "0.47.2"
+    "react-native": "0.47.2",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.1"
   },
   "license": "MIT",
   "dependencies": {}
