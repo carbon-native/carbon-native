@@ -1343,7 +1343,7 @@ caniuse-lite@^1.0.30000701:
   version "1.0.30000702"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000702.tgz#bd66e40345528fe0c001917d1d3f55454df634f1"
 
-"carbon-native@file:../":
+"carbon-native@file:..":
   version "0.0.6"
 
 caseless@~0.12.0:
