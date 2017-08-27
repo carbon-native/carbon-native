@@ -15,11 +15,14 @@
   ],
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && babel ./src --out-dir ./dist && cp package.json dist",
+    "build": "npm run clean && babel ./src --out-dir ./dist",
     "start": "npm run build && babel ./src --watch --out-dir ./dist",
     "prepare": "npm run build",
     "precommit": "lint-staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "react-native"
   },
   "lint-staged": {
     "src/*.js": [
@@ -53,8 +56,13 @@
     "babel-cli": "^6.26.0",
     "babel-preset-react-native": "^3.0.1",
     "husky": "^0.14.3",
+    "jest": "^20.0.4",
     "lint-staged": "^4.0.3",
     "prettier": "^1.5.3",
+    "prop-types": "^15.5.10",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.47.2",
+    "react-test-renderer": "^15.6.1",
     "rimraf": "^2.6.1"
   },
   "license": "MIT",

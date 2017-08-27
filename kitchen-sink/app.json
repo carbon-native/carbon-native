@@ -1,9 +1,8 @@
 {
   "expo": {
-    "sdkVersion": "18.0.0",
+    "sdkVersion": "19.0.0",
     "packagerOpts": {
       "projectRoots": "",
-      "assetExts": ["ttf"],
       "config": "rn-cli.config.js"
     }
   }
