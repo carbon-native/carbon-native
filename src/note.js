@@ -6,13 +6,15 @@ import { carbonStyles } from './styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  fontSize: 14,
-  color: '#AEACB4',
+  default: {
+    fontSize: 14,
+    color: '#AEACB4',
+  },
 });
 
 export default function Note(props) {
   return (
-    <Text {...props} style={[styles, props.style]}>
+    <Text {...props} style={[styles.default, props.style]}>
       {props.children}
     </Text>
   );

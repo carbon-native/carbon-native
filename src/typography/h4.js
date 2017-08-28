@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 
 const styles = StyleSheet.create({
-  marginBottom: 10,
-  fontSize: 18,
-  fontWeight: '500',
+  default: {
+    marginBottom: 10,
+    fontSize: 18,
+    fontWeight: '500',
+  },
 });
 
 export default function H4(props) {
   return (
-    <Text {...props} style={[styles, props.style]}>
+    <Text {...props} style={[styles.default, props.style]}>
       {props.children}
     </Text>
   );

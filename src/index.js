@@ -30,7 +30,8 @@ import List from './list/list';
 
 import { carbonStyles, colors } from './styles';
 
-export { carbonStyles, colors } from './styles';
+export { carbonStyles };
+export { colors };
 
 export { H1 };
 export { H2 };

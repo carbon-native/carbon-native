@@ -9,6 +9,7 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
+    "pack-install": "npm install $(npm pack .. | tail -1)",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
@@ -19,7 +20,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "carbon-native": "file:..",
+    "carbon-native": "file:carbon-native-0.0.6.tgz",
     "expo": "^18.0.3",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",

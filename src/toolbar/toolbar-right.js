@@ -6,17 +6,19 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  flex: 1,
-  flexDirection: 'row',
-  justifyContent: 'flex-end',
-  overflow: 'hidden',
-  paddingVertical: 8,
-  paddingLeft: 6,
+  default: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-end',
+    overflow: 'hidden',
+    paddingVertical: 8,
+    paddingLeft: 6,
+  },
 });
 
 export default function ToolbarRight(props) {
   return (
-    <View {...props} style={[styles, props.style]}>
+    <View {...props} style={[styles.default, props.style]}>
       {props.children}
     </View>
   );
