@@ -15,12 +15,7 @@ We use the Kitchen Sink as our test app as we create new or update existing comp
 ## Develop
 
 ```bash
-# Start developing carbon-native library
-npm start
-
-# Start developing kitchen-sink application
-cd kitchen-sink
-npm start
+./start
 ```
 
 ## Test
