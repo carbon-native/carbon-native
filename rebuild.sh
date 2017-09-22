@@ -1,1 +1,2 @@
-rm TEST.md
+cd kitchen-sink
+npm run pack-install

@@ -72,18 +72,16 @@ export default function MainMenu(props) {
   return (
     <Content>
       <List>
-        {navigationItems.map((item, index) =>
+        {navigationItems.map((item, index) => (
           <Item key={index} onPress={() => navigate(item.name)}>
             <ItemIcon>
               <Icon name={item.icon} size={24} />
             </ItemIcon>
             <ItemContent style={item.lastItem && cs.itemLast}>
-              <ItemText>
-                {item.name}
-              </ItemText>
+              <ItemText>{item.name}</ItemText>
             </ItemContent>
           </Item>
-        )}
+        ))}
       </List>
     </Content>
   );
