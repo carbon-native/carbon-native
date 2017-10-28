@@ -5,11 +5,18 @@ import { carbonStyles } from './styles';
 
 const cs = StyleSheet.create(carbonStyles);
 
-const styles = StyleSheet.create({ flex: 1 });
+const styles = StyleSheet.create({
+  default: {
+    flex: 1,
+  },
+});
 
 export default function Container(props) {
   return (
-    <View {...props} style={[styles, props.padding && cs.padding, props.style]}>
+    <View
+      {...props}
+      style={[styles.default, props.padding && cs.padding, props.style]}
+    >
       {props.children}
     </View>
   );

@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
 
 const styles = StyleSheet.create({
-  flexWrap: 'wrap',
-  flexDirection: 'row',
-  marginBottom: 10,
+  default: {
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    marginBottom: 10,
+  },
 });
 
 export default function P(props) {
   return (
-    <Text {...props} style={[styles, props.style]}>
+    <Text {...props} style={[styles.default, props.style]}>
       {props.children}
     </Text>
   );

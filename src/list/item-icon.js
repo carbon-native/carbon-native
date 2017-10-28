@@ -6,16 +6,18 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  flexDirection: 'row',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: 32,
-  marginRight: 14,
+  default: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 32,
+    marginRight: 14,
+  },
 });
 
 export default function ItemIcon(props) {
   return (
-    <View {...props} style={[styles, props.style]}>
+    <View {...props} style={[styles.default, props.style]}>
       {props.children}
     </View>
   );

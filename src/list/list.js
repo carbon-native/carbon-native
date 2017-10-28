@@ -6,15 +6,17 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  // alignSelf: 'stretch',
-  borderBottomWidth: StyleSheet.hairlineWidth,
-  borderColor: '#CDCDCD',
-  backgroundColor: '#fff',
+  default: {
+    // alignSelf: 'stretch',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: '#CDCDCD',
+    backgroundColor: '#fff',
+  },
 });
 
 export default function List(props) {
   return (
-    <View {...props} style={[styles, props.style]}>
+    <View {...props} style={[styles.default, props.style]}>
       {props.children}
     </View>
   );

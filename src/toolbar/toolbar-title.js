@@ -6,22 +6,24 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  ...Platform.select({
-    ios: {
-      fontSize: 17,
-    },
-    android: {
-      fontSize: 20,
-    },
-  }),
-  fontWeight: '600',
+  default: {
+    ...Platform.select({
+      ios: {
+        fontSize: 17,
+      },
+      android: {
+        fontSize: 20,
+      },
+    }),
+    fontWeight: '600',
+  },
 });
 
 export default function ToolbarTitle(props) {
   const color = props.color ? props.color : null;
 
   return (
-    <Text {...props} style={[styles, color && cs[color]]}>
+    <Text {...props} style={[styles.default, color && cs[color]]}>
       {props.children}
     </Text>
   );

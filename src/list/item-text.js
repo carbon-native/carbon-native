@@ -6,15 +6,18 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  flex: 1,
-  marginVertical: 12,
-  fontSize: 17,
-  fontWeight: '400',
+  default: {
+    flex: 1,
+    marginVertical: 12,
+    fontSize: 17,
+    fontWeight: '400',
+  },
 });
 
 export default function ItemText(props) {
   return (
-    <Text {...props} style={[styles, props.style]}>
+    <Text {...props} style={[styles.default, props.style, { color: 'red' }]}>
+      {props.children}
       {props.children}
     </Text>
   );

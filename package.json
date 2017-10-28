@@ -14,8 +14,10 @@
     }
   ],
   "scripts": {
+    "watch":
+      "watchman -- trigger ~/dev/carbon-native jsfiles 'dist/**/*.js' -- ./rebuild.sh",
     "clean": "rimraf dist",
-    "build": "npm run clean && babel ./src --out-dir ./dist",
+    "build": "npm run clean && babel ./src --out-dir dist",
     "start": "npm run build && babel ./src --watch --out-dir ./dist",
     "prepare": "npm run build",
     "precommit": "lint-staged",
@@ -38,16 +40,8 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "index.js",
-    "dist"
-  ],
-  "keywords": [
-    "react-native",
-    "ui"
-  ],
+  "files": ["LICENSE", "README.md", "index.js", "dist"],
+  "keywords": ["react-native", "ui"],
   "peerDepenecies": {
     "react": ">=16.0.0-alpha.12",
     "react-native": ">=0.47.2"

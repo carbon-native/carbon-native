@@ -6,10 +6,12 @@ import { carbonStyles } from './styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  // margin: 10,
-  marginBottom: 20,
-  borderRadius: 2,
-  backgroundColor: '#fff',
+  default: {
+    // margin: 10,
+    marginBottom: 20,
+    borderRadius: 2,
+    backgroundColor: '#fff',
+  },
 });
 
 export default function Card(props) {
@@ -20,7 +22,7 @@ export default function Card(props) {
       shadowOpacity={1}
       shadowRadius={2}
       {...props}
-      style={[styles, props.style]}
+      style={[styles.default, props.style]}
     >
       {props.children}
     </View>

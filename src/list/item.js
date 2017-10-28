@@ -6,11 +6,13 @@ import { carbonStyles } from '../styles';
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
-  flex: 1,
-  flexDirection: 'row',
-  alignItems: 'center',
-  paddingLeft: 15,
-  backgroundColor: '#fff',
+  default: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingLeft: 15,
+    backgroundColor: '#fff',
+  },
 });
 
 export default function Item(props) {
@@ -21,7 +23,7 @@ export default function Item(props) {
         underlayColor={'#DADADA'}
         onPress={props.onPress}
       >
-        <View style={[styles, props.style]}>
+        <View style={[styles.default, props.style]}>
           {props.children}
         </View>
       </TouchableHighlight>
@@ -29,7 +31,7 @@ export default function Item(props) {
   }
   return (
     <View>
-      <View {...props} style={[styles, props.style]}>
+      <View {...props} style={[styles.default, props.style]}>
         {props.children}
       </View>
     </View>

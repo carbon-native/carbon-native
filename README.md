@@ -6,7 +6,7 @@ Check out the [demo app](https://github.com/carbon-native/kitchen-sink).
 
 ## Get Started
 
-```
+```sh
 npm install carbon-native --save
 ```
 
@@ -16,7 +16,7 @@ npm install carbon-native --save
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/badge.png" width="375" height="auto" alt="Badge">
 
-```
+```jsx
 import {
   Badge,
 } from 'carbon-native';
@@ -31,7 +31,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/buttons.png" width="375" height="auto" alt="Buttons">
 
-```
+```jsx
 import {
   Button,
 } from 'carbon-native';
@@ -58,7 +58,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/cards.png" width="375" height="auto" alt="Cards">
 
-```
+```jsx
 import {
   Card,
   H4,
@@ -76,12 +76,12 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
 
-```
+```sh
 npm install react-native-vector-icons --save
 rnpm link
 ```
 
-```
+```jsx
 import Icon 'react-native-vector-icons/FontAwesome';
 
 <Icon
@@ -94,7 +94,7 @@ import Icon 'react-native-vector-icons/FontAwesome';
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
 
-```
+```jsx
 import {
   Item,
   ItemIcon,
@@ -118,7 +118,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/range.png" width="375" height="auto" alt="Range">
 
-```
+```jsx
 import {
   Range,
 } from 'carbon-native';
@@ -133,7 +133,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toggle.png" width="375" height="auto" alt="Toggle">
 
-```
+```jsx
 import {
   Toggle,
 } from 'carbon-native';
@@ -149,7 +149,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbars.png" width="375" height="auto" alt="Toolbars">
 
-```
+```jsx
 import {
   Toolbar,
   ToolbarTitle,
@@ -164,7 +164,7 @@ import {
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/typography.png" width="375" height="auto" alt="Typography">
 
-```
+```jsx
 import {
   H1,
   H2,

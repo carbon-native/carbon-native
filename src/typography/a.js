@@ -4,12 +4,14 @@ import { StyleSheet, Text } from 'react-native';
 import { colors } from '../styles';
 
 const styles = StyleSheet.create({
-  color: colors.primary,
+  default: {
+    color: colors.primary,
+  },
 });
 
 export default function A(props) {
   return (
-    <Text {...props} style={[styles, props.style]}>
+    <Text {...props} style={[styles.default, props.style]}>
       {props.children}
     </Text>
   );
