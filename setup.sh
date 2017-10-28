@@ -1,5 +1,6 @@
+nvm use
 rm -rf node_modules
 rm -rf kitchen-sink/node_modules
-npm install
+yarn
 cd kitchen-sink
-npm install
+yarn

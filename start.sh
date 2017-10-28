@@ -1,3 +1,5 @@
+nvm use
+
 # Start developing carbon-native library
 npm start
 

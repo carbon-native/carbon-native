@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
 
 export default function ItemText(props) {
   return (
-    <Text {...props} style={[styles.default, props.style, { color: 'red' }]}>
+    <Text {...props} style={[styles.default, props.style]}>
       {props.children}
       {props.children}
     </Text>
