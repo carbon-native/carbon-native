@@ -1,7 +1,7 @@
 nvm use
 
 # Start developing carbon-native library
-npm start
+# npm start
 
 # Start developing kitchen-sink application
 cd kitchen-sink
