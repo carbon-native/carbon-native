@@ -9,7 +9,7 @@
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "pack-install": "npm install $(npm pack .. | tail -1)",
+    "pack-install": "npm install $(npm pack ../src | tail -1)",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
