@@ -20,7 +20,6 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "carbon-native": "file:carbon-native-0.0.6.tgz",
     "expo": "^18.0.3",
     "react": "16.0.0-alpha.12",
     "react-native": "^0.45.1",

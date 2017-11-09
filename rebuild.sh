@@ -1,2 +1,2 @@
 cd kitchen-sink
-npm run pack-install
+yarn run pack-install

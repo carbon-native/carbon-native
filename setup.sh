@@ -1,5 +1,3 @@
-rm -rf node_modules
+rm -rf carbon-native/node_modules
 rm -rf kitchen-sink/node_modules
-npm install
-cd kitchen-sink
-npm install
+yarn install
