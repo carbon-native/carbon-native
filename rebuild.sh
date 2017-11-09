@@ -1,4 +1,4 @@
 nvm use
 npm run build
-cd kitchen-sink
+cd packages/kitchen-sink
 yarn run pack-install

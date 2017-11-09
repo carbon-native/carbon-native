@@ -1,2 +1,2 @@
-cd kitchen-sink
+cd packages/kitchen-sink
 yarn start -- --reset-cache
