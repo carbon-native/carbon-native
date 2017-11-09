@@ -1,4 +1,2 @@
-# cd carbon-native
-# yarn start
-cd /kitchen-sink
-yarn start
+cd kitchen-sink
+yarn start -- --reset-cache
