@@ -1,5 +1,0 @@
-node_modules/
-.expo/
-npm-debug.*
-carbon-native-*.tgz
-package-lock.json
