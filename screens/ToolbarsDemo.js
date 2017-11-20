@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Container, Toolbar, ToolbarTitle, Content } from '../src/index.js';
 
 export default function ToolbarsDemo() {

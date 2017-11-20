@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { StyleSheet } from 'react-native';
-
 import {
   carbonStyles,
   H1,
@@ -13,6 +11,7 @@ import {
   P,
   Content,
 } from '../src/index.js';
+
 const cs = StyleSheet.create(carbonStyles);
 
 export default function TypographyDemo() {

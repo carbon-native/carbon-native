@@ -1,9 +1,6 @@
 import React from 'react';
-
 import { StyleSheet, View } from 'react-native';
-
 import { carbonStyles, H3, Content, Button } from '../src/index.js';
-
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);

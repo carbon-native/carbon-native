@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { StyleSheet } from 'react-native';
-
 import {
   carbonStyles,
   Content,
@@ -12,6 +10,7 @@ import {
   ItemHeaderText,
   Toggle,
 } from '../src/index.js';
+
 const cs = StyleSheet.create(carbonStyles);
 
 export default class ToggleDemo extends React.Component {
