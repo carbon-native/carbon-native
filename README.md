@@ -72,24 +72,6 @@ import {
 </Card>
 ```
 
-### Icons
-
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
-
-```sh
-npm install react-native-vector-icons --save
-rnpm link
-```
-
-```jsx
-import Icon 'react-native-vector-icons/FontAwesome';
-
-<Icon
-  name="volume-down"
-  size={24}
-/>
-```
-
 ### Lists
 
 <img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
