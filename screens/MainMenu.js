@@ -15,43 +15,15 @@ import {
 const cs = StyleSheet.create(carbonStyles);
 
 const navigationItems = [
-  {
-    name: 'Badges',
-    icon: 'certificate',
-  },
-  {
-    name: 'Buttons',
-    icon: 'circle',
-  },
-  {
-    name: 'Cards',
-    icon: 'clone',
-  },
-  {
-    name: 'Grid',
-    icon: 'th',
-  },
-  {
-    name: 'Lists',
-    icon: 'list',
-  },
-  {
-    name: 'Range',
-    icon: 'sliders',
-  },
-  {
-    name: 'Toggle',
-    icon: 'toggle-on',
-  },
-  {
-    name: 'Toolbars',
-    icon: 'bars',
-  },
-  {
-    name: 'Typography',
-    icon: 'font',
-    lastItem: true,
-  },
+  { name: 'Badges', icon: 'certificate' },
+  { name: 'Buttons', icon: 'circle' },
+  { name: 'Cards', icon: 'clone' },
+  { name: 'Grid', icon: 'th' },
+  { name: 'Lists', icon: 'list' },
+  { name: 'Range', icon: 'sliders' },
+  { name: 'Toggle', icon: 'toggle-on' },
+  { name: 'Toolbars', icon: 'bars' },
+  { name: 'Typography', icon: 'font', lastItem: true },
 ];
 
 export default function MainMenu(props) {
