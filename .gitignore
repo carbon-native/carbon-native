@@ -3,3 +3,8 @@ node_modules
 npm-debug.*
 dist
 package-lock.json
+node_modules/
+.expo/
+npm-debug.*
+carbon-native-*.tgz
+package-lock.json
