@@ -16,12 +16,6 @@ We use the Kitchen Sink as our test app as we create new or update existing comp
 
 ```bash
 ./start
-
-# in another window
-# ever time you make a change to ./src
-# yes you have to manually run it right now
-# next step is ot automte
-./rebuild.sh 
 ```
 
 ## Test
@@ -35,5 +29,6 @@ npm test
 To deploy Carbon Native we use a shell script that ultimetely just publishes to NPM. Only specified organizations admins should have access to publish on NPM.
 
 ```bash
+npm run build
 ./publish.sh
 ```
