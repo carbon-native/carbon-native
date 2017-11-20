@@ -7,7 +7,6 @@ import BadgesDemo from './screens/BadgesDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardsDemo from './screens/CardsDemo';
 import GridDemo from './screens/GridDemo';
-import IconsDemo from './screens/IconsDemo';
 import ListsDemo from './screens/ListsDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
@@ -29,7 +28,6 @@ const routes = {
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
   Cards: { screen: CardsDemo, navigationOptions: { title: 'Cards' } },
   Grid: { screen: GridDemo, navigationOptions: { title: 'Grid' } },
-  Icons: { screen: IconsDemo, navigationOptions: { title: 'Icons' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },

@@ -32,10 +32,6 @@ const navigationItems = [
     icon: 'th',
   },
   {
-    name: 'Icons',
-    icon: 'heart',
-  },
-  {
     name: 'Lists',
     icon: 'list',
   },
