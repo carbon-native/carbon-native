@@ -14,7 +14,7 @@ import {
 const cs = StyleSheet.create(carbonStyles);
 
 const navigationItems = [
-  { name: 'Badges', icon: 'certificate' },
+  { name: 'Badge', icon: 'certificate' },
   { name: 'Buttons', icon: 'circle' },
   { name: 'Cards', icon: 'clone' },
   { name: 'Lists', icon: 'list' },

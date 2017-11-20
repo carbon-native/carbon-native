@@ -3,7 +3,7 @@ import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MainMenu from './screens/MainMenu';
-import BadgesDemo from './screens/BadgesDemo';
+import BadgeDemo from './screens/BadgeDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardsDemo from './screens/CardsDemo';
 import ListsDemo from './screens/ListsDemo';
@@ -23,7 +23,7 @@ const routes = {
     screen: MainMenu,
     navigationOptions: { title: 'Kitchen Sink' },
   },
-  Badges: { screen: BadgesDemo, navigationOptions: { title: 'Badges' } },
+  Badge: { screen: BadgeDemo, navigationOptions: { title: 'Badge' } },
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
   Cards: { screen: CardsDemo, navigationOptions: { title: 'Cards' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
