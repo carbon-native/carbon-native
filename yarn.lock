@@ -339,6 +339,10 @@ auth0@^2.7.0:
     request "^2.83.0"
     rest-facade "^1.5.0"
 
+await-to-js@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/await-to-js/-/await-to-js-2.0.1.tgz#fcb8a2178c763e2970aef1da9daf5c493e3653e0"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"

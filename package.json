@@ -17,8 +17,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "package-json": "node ./scripts/package-json.js",
-    "build":
-      "npm run clean && babel ./src --out-dir dist && npm run package-json",
+    "build": "npm run clean && babel ./src --out-dir dist && npm run package-json",
     "build-watch": "npm run build && babel ./src --watch --out-dir ./dist",
     "precommit": "lint-staged",
     "test": "jest",
@@ -46,12 +45,16 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "keywords": ["react-native", "ui"],
+  "keywords": [
+    "react-native",
+    "ui"
+  ],
   "peerDepenecies": {
     "react": ">=16.0.0-alpha.12",
     "react-native": ">=0.45.1"
   },
   "devDependencies": {
+    "await-to-js": "^2.0.1",
     "babel-cli": "^6.26.0",
     "babel-preset-react-native": "^3.0.1",
     "fs-extra": "^4.0.2",

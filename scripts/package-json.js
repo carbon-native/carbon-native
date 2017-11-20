@@ -1,18 +1,21 @@
 const fs = require('fs-extra');
 const _ = require('lodash');
+const { to } = require('await-to-js');
 
-fs
-  .readJson('./package.json')
-  .then(data => {
-    data.dependencies = _.omit(data.dependencies, [
-      'expo',
-      'react',
-      'react-native',
-    ]);
+(async function() {
+  const [error1, data] = await to(fs.readJson('./package.json'));
+  if (error1) return console.error(error1);
 
-    data.private = false;
+  data.dependencies = _.omit(data.dependencies, [
+    'expo',
+    'react',
+    'react-native',
+  ]);
 
-    return fs.writeJson('./dist/package.json', data, { spaces: 2 });
-  })
-  .then(() => console.log('package-lock.js finished!'))
-  .catch(error => console.error('package-json.js error', error));
+  data.private = false;
+
+  const [error2] = await to(
+    fs.writeJson('./dist/package.json', data, { spaces: 2 })
+  );
+  if (error2) return console.error(error2);
+})();
