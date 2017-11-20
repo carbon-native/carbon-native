@@ -2,7 +2,7 @@
   "BadgeDemo": [],
   "BarsDemo": [],
   "ButtonsDemo": [],
-  "CardsDemo": [],
+  "CardDemo": [],
   "ListsDemo": [],
   "ToggleDemo": [
     { "name": "frodo", "color": "", "active": true },

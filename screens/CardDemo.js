@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function CardsDemo() {
+export default function CardDemo() {
   return (
     <Content style={cs.paddingLg}>
       <Card style={cs.paddingLg}>

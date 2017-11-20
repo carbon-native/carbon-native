@@ -54,9 +54,9 @@ import {
 />
 ```
 
-### Cards
+### Card
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/cards.png" width="375" height="auto" alt="Cards">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/card.png" width="375" height="auto" alt="Card">
 
 ```jsx
 import {

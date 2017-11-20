@@ -16,7 +16,7 @@ const cs = StyleSheet.create(carbonStyles);
 const navigationItems = [
   { name: 'Badge', icon: 'certificate' },
   { name: 'Buttons', icon: 'circle' },
-  { name: 'Cards', icon: 'clone' },
+  { name: 'Card', icon: 'clone' },
   { name: 'Lists', icon: 'list' },
   { name: 'Range', icon: 'sliders' },
   { name: 'Toggle', icon: 'toggle-on' },

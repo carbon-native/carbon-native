@@ -5,7 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import MainMenu from './screens/MainMenu';
 import BadgeDemo from './screens/BadgeDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
-import CardsDemo from './screens/CardsDemo';
+import CardDemo from './screens/CardDemo';
 import ListsDemo from './screens/ListsDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
@@ -25,7 +25,7 @@ const routes = {
   },
   Badge: { screen: BadgeDemo, navigationOptions: { title: 'Badge' } },
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
-  Cards: { screen: CardsDemo, navigationOptions: { title: 'Cards' } },
+  Card: { screen: CardDemo, navigationOptions: { title: 'Card' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
