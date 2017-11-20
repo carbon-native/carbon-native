@@ -18,7 +18,6 @@ export default function ItemText(props) {
   return (
     <Text {...props} style={[styles.default, props.style]}>
       {props.children}
-      {props.children}
     </Text>
   );
 }
