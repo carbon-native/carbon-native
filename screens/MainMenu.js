@@ -17,7 +17,6 @@ const navigationItems = [
   { name: 'Badges', icon: 'certificate' },
   { name: 'Buttons', icon: 'circle' },
   { name: 'Cards', icon: 'clone' },
-  { name: 'Grid', icon: 'th' },
   { name: 'Lists', icon: 'list' },
   { name: 'Range', icon: 'sliders' },
   { name: 'Toggle', icon: 'toggle-on' },

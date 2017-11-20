@@ -6,7 +6,6 @@ import MainMenu from './screens/MainMenu';
 import BadgesDemo from './screens/BadgesDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardsDemo from './screens/CardsDemo';
-import GridDemo from './screens/GridDemo';
 import ListsDemo from './screens/ListsDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
@@ -27,7 +26,6 @@ const routes = {
   Badges: { screen: BadgesDemo, navigationOptions: { title: 'Badges' } },
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
   Cards: { screen: CardsDemo, navigationOptions: { title: 'Cards' } },
-  Grid: { screen: GridDemo, navigationOptions: { title: 'Grid' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
