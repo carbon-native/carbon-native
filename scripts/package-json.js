@@ -10,6 +10,8 @@ fs
       'react-native',
     ]);
 
+    data.private = false;
+
     return fs.writeJson('./dist/package.json', data, { spaces: 2 });
   })
   .then(() => console.log('package-lock.js finished!'))
