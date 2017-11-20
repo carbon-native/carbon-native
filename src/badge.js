@@ -26,9 +26,7 @@ export default function Badge(props) {
 
   return (
     <View {...props} style={[styles.base, bgColor && cs[bgColor], props.style]}>
-      <Text
-        style={[styles.text, textColor && cs[textColor], { color: 'blue' }]}
-      >
+      <Text style={[styles.text, textColor && cs[textColor]]}>
         {props.text}
       </Text>
     </View>
