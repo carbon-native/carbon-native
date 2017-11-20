@@ -20,7 +20,7 @@ const navigationItems = [
   { name: 'Lists', icon: 'list' },
   { name: 'Range', icon: 'sliders' },
   { name: 'Toggle', icon: 'toggle-on' },
-  { name: 'Toolbars', icon: 'bars' },
+  { name: 'Toolbar', icon: 'bars' },
   { name: 'Typography', icon: 'font', lastItem: true },
 ];
 

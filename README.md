@@ -127,9 +127,9 @@ import {
 />
 ```
 
-### Toolbars
+### Toolbar
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbars.png" width="375" height="auto" alt="Toolbars">
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbar.png" width="375" height="auto" alt="Toolbar">
 
 ```jsx
 import {

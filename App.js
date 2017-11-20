@@ -9,7 +9,7 @@ import CardDemo from './screens/CardDemo';
 import ListsDemo from './screens/ListsDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
-import ToolbarsDemo from './screens/ToolbarsDemo';
+import ToolbarDemo from './screens/ToolbarDemo';
 import TypographyDemo from './screens/TypographyDemo';
 
 const navigatorConfig = {
@@ -29,8 +29,8 @@ const routes = {
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
-  Toolbars: {
-    screen: ToolbarsDemo,
+  Toolbar: {
+    screen: ToolbarDemo,
     navigationOptions: { title: 'Toolbar' },
   },
   Typography: {
