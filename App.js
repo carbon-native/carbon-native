@@ -10,7 +10,6 @@ import CardsDemo from './screens/CardsDemo';
 import GridDemo from './screens/GridDemo';
 import IconsDemo from './screens/IconsDemo';
 import ListsDemo from './screens/ListsDemo';
-import ModalDemo from './screens/ModalDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
 import ToolbarsDemo from './screens/ToolbarsDemo';
@@ -37,7 +36,6 @@ const routes = {
   Grid: { screen: GridDemo, navigationOptions: { title: 'Grid' } },
   Icons: { screen: IconsDemo, navigationOptions: { title: 'Icons' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
-  Modal: { screen: ModalDemo, navigationOptions: { title: 'Modal' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
   Toolbars: {

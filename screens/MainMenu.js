@@ -44,10 +44,6 @@ const navigationItems = [
     icon: 'list',
   },
   {
-    name: 'Modal',
-    icon: 'sticky-note-o',
-  },
-  {
     name: 'Range',
     icon: 'sliders',
   },
