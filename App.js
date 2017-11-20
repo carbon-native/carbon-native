@@ -3,7 +3,6 @@ import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MainMenu from './screens/MainMenu';
-import AlertsDemo from './screens/AlertsDemo';
 import BadgesDemo from './screens/BadgesDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardsDemo from './screens/CardsDemo';
@@ -25,10 +24,6 @@ const routes = {
   MainMenu: {
     screen: MainMenu,
     navigationOptions: { title: 'Kitchen Sink' },
-  },
-  Alerts: {
-    screen: AlertsDemo,
-    navigationOptions: { title: 'Alerts' },
   },
   Badges: { screen: BadgesDemo, navigationOptions: { title: 'Badges' } },
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },

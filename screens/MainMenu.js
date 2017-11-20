@@ -16,10 +16,6 @@ const cs = StyleSheet.create(carbonStyles);
 
 const navigationItems = [
   {
-    name: 'Alerts',
-    icon: 'exclamation-triangle',
-  },
-  {
     name: 'Badges',
     icon: 'certificate',
   },
