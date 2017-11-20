@@ -1,10 +1,6 @@
 .DS_Store
-node_modules
-npm-debug.*
-dist
-package-lock.json
-node_modules/
 .expo/
+dist
+node_modules/
 npm-debug.*
-carbon-native-*.tgz
 package-lock.json
