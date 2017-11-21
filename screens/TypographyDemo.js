@@ -9,6 +9,7 @@ import {
   H5,
   H6,
   P,
+  BR,
   Content,
 } from '../src/index.js';
 
@@ -24,6 +25,9 @@ export default function TypographyDemo() {
       <H5>I'm an H5!</H5>
       <H6>I'm an H6!</H6>
       <P>I'm a paragraph with a some text!</P>
+      <BR />
+      <BR />
+      <P>I'm a paragraph preceeded by a couple BRs</P>
     </Content>
   );
 }
