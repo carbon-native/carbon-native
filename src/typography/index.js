@@ -6,6 +6,7 @@ import H4 from './h4';
 import H5 from './h5';
 import H6 from './h6';
 import P from './p';
+import BR from './br';
 
 export { A };
 export { H1 };
@@ -15,6 +16,7 @@ export { H4 };
 export { H5 };
 export { H6 };
 export { P };
+export { BR };
 
 export default {
   A,
@@ -25,4 +27,5 @@ export default {
   H5,
   H6,
   P,
+  BR,
 };

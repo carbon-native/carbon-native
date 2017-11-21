@@ -2,5 +2,6 @@
 .expo/
 dist
 node_modules/
-npm-debug.*
+npm-*.log
+yarn-*.log
 package-lock.json

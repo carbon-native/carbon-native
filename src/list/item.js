@@ -23,7 +23,9 @@ export default function Item(props) {
         underlayColor={'#DADADA'}
         onPress={props.onPress}
       >
-        <View style={[styles.default, props.style]}>{props.children}</View>
+        <View style={[styles.default, props.style]}>
+          {props.children}
+        </View>
       </TouchableHighlight>
     );
   }

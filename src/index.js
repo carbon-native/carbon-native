@@ -6,6 +6,7 @@ import H4 from './typography/h4';
 import H5 from './typography/h5';
 import H6 from './typography/h6';
 import P from './typography/p';
+import BR from './typography/br';
 
 import Toolbar from './toolbar/toolbar';
 import ToolbarLeft from './toolbar/toolbar-left';
@@ -40,6 +41,7 @@ export { H4 };
 export { H5 };
 export { H6 };
 export { P };
+export { BR };
 export { A };
 export { Toolbar };
 export { ToolbarTitle };
@@ -70,6 +72,7 @@ export default {
   H5,
   H6,
   P,
+  BR,
   A,
   Toolbar,
   ToolbarTitle,
