@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import TestComponent from '../App';
+import { ToolbarDemo as TestComponent } from '../screens';
 
-it('renders without crashing', () => {
+test('renders correctly', () => {
   const rendered = renderer.create(<TestComponent />).toJSON();
   expect(rendered).toBeTruthy();
 });
