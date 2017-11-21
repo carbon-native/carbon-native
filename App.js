@@ -3,10 +3,13 @@ import { Platform, StatusBar } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 import MainMenu from './screens/MainMenu';
+import AlertsDemo from './screens/AlertsDemo';
 import BadgeDemo from './screens/BadgeDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardDemo from './screens/CardDemo';
+import IconsDemo from './screens/IconsDemo';
 import ListsDemo from './screens/ListsDemo';
+import ModalDemo from './screens/ModalDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
 import ToolbarDemo from './screens/ToolbarDemo';
@@ -23,10 +26,16 @@ const routes = {
     screen: MainMenu,
     navigationOptions: { title: 'Kitchen Sink' },
   },
+  Alerts: {
+    screen: AlertsDemo,
+    navigationOptions: { title: 'Alerts' },
+  },
   Badge: { screen: BadgeDemo, navigationOptions: { title: 'Badge' } },
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
   Card: { screen: CardDemo, navigationOptions: { title: 'Card' } },
+  Icons: { screen: IconsDemo, navigationOptions: { title: 'Icons' } },
   Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
+  Modal: { screen: ModalDemo, navigationOptions: { title: 'Modal' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
   Toolbar: {
