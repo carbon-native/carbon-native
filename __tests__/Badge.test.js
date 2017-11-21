@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Badge from '../src/badge.js';
+import { Badge as TestComponent } from '../src';
 
 test('renders correctly', () => {
-  const rendered = renderer.create(<Badge />).toJSON();
+  const rendered = renderer.create(<TestComponent />).toJSON();
   // expect(rendered).toMatchSnapshot();
   expect(rendered).toBeTruthy();
 });
