@@ -17,7 +17,7 @@ import TypographyDemo from './screens/TypographyDemo';
 
 const navigatorConfig = {
   cardStyle: {
-    paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight || 0,
+    paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
   },
 };
 
