@@ -7,5 +7,5 @@ if [ "$environment" == "production" ] ; then
     yarn start-dist --reset-cache
 else
     echo 'starting development environment serving src folder'
-    yarn start --reset-cache
+    yarn start --reset-cache & yarn test --watch
 fi
