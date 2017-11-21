@@ -5,7 +5,7 @@ import { StyleSheet, Text } from 'react-native';
 const styles = StyleSheet.create({
   default: {
     marginBottom: 10,
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: '500',
   },
 });
