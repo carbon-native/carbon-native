@@ -1,4 +1,6 @@
 #!/bin/bash
+yarn test
+
 echo "patch, minor, or major release? "
 read release_type
 
