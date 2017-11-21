@@ -1,37 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const cs = StyleSheet.create(carbonStyles);
 
-const propTypes = {
+const styles = StyleSheet.create({
+  default: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 32,
+    marginRight: 14,
+  },
+});
+
+export default function ItemIcon(props) {
+  return (
+    <View {...props} style={[styles.default, props.style]}>
+      {props.children}
+    </View>
+  );
+}
+
+ItemIcon.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
   style: PropTypes.any,
 };
-
-const defaultProps = {};
-
-export default function ItemIcon(props) {
-  return (
-    <View
-      {...props}
-      style={[cs.itemIcon, props.style]}
-    >
-      {props.children}
-    </View>
-  );
-}
-
-ItemIcon.propTypes = propTypes;
-ItemIcon.defaultProps = defaultProps;
+ItemIcon.defaultProps = {};

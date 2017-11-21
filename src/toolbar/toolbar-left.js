@@ -1,18 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import {
-  StyleSheet,
-  View,
-} from 'react-native';
-
-import {
-  carbonStyles,
-} from '../styles';
+import { StyleSheet, View } from 'react-native';
+import { carbonStyles } from '../styles';
 
 const cs = StyleSheet.create(carbonStyles);
 
-const propTypes = {
+const styles = StyleSheet.create({
+  default: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    overflow: 'hidden',
+    paddingVertical: 8,
+    paddingRight: 6,
+  },
+});
+
+export default function ToolbarLeft(props) {
+  return (
+    <View {...props} style={[styles.default, props.style]}>
+      {props.children}
+    </View>
+  );
+}
+
+ToolbarLeft.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -22,23 +34,4 @@ const propTypes = {
   header: PropTypes.bool,
   style: PropTypes.any,
 };
-
-const defaultProps = {};
-
-export default function ToolbarLeft(props) {
-  return (
-    <View
-      {...props}
-      style={[
-        cs.container,
-        cs.toolbarLeft,
-        props.style,
-      ]}
-    >
-      {props.children}
-    </View>
-  );
-}
-
-ToolbarLeft.propTypes = propTypes;
-ToolbarLeft.defaultProps = defaultProps;
+ToolbarLeft.defaultProps = {};

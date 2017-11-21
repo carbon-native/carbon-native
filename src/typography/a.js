@@ -1,18 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, Text } from 'react-native';
+import { colors } from '../styles';
 
-import {
-  StyleSheet,
-  Text,
-} from 'react-native';
+const styles = StyleSheet.create({
+  default: {
+    color: colors.primary,
+  },
+});
 
-import {
-  carbonStyles,
-} from '../styles';
+export default function A(props) {
+  return (
+    <Text {...props} style={[styles.default, props.style]}>
+      {props.children}
+    </Text>
+  );
+}
 
-const cs = StyleSheet.create(carbonStyles);
-
-const propTypes = {
+A.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
@@ -20,19 +25,4 @@ const propTypes = {
   ]),
   style: PropTypes.any,
 };
-
-const defaultProps = {};
-
-export default function A(props) {
-  return (
-    <Text
-      {...props}
-      style={[cs.a, props.style]}
-    >
-      {props.children}
-    </Text>
-  );
-}
-
-A.propTypes = propTypes;
-A.defaultProps = defaultProps;
+A.defaultProps = {};
