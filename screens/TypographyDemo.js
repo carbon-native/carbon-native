@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import {
-  carbonStyles,
+  Content,
   H1,
   H2,
   H3,
@@ -10,10 +9,12 @@ import {
   H6,
   P,
   BR,
-  Content,
+  Em,
+  Small,
+  Strong,
+  S,
+  U,
 } from '../src/index.js';
-
-const cs = StyleSheet.create(carbonStyles);
 
 export default function TypographyDemo() {
   return (
@@ -24,10 +25,28 @@ export default function TypographyDemo() {
       <H4>I'm an H4!</H4>
       <H5>I'm an H5!</H5>
       <H6>I'm an H6!</H6>
-      <P>I'm a paragraph with a some text!</P>
+      <P>I'm a paragraph with some text!</P>
       <BR />
-      <BR />
-      <P>I'm a paragraph preceeded by a couple BRs</P>
+      <P>This line is preceeded by a break</P>
+      <P>
+        This line has a break<BR />
+        before the end of the line.
+      </P>
+      <P>
+        <Small>This line is small and is a great size for fine print.</Small>
+      </P>
+      <P>
+        <Strong>This line is bold to indicate importance.</Strong>
+      </P>
+      <P>
+        <Em>This line is italicized to indicate emphasis.</Em>
+      </P>
+      <P>
+        <S>This line has a strikethrough, or a line through it.</S>
+      </P>
+      <P>
+        <U>This line has an underline.</U>
+      </P>
     </Content>
   );
 }

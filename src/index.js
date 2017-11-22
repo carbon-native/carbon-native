@@ -1,4 +1,3 @@
-import A from './typography/a';
 import H1 from './typography/h1';
 import H2 from './typography/h2';
 import H3 from './typography/h3';
@@ -6,7 +5,13 @@ import H4 from './typography/h4';
 import H5 from './typography/h5';
 import H6 from './typography/h6';
 import P from './typography/p';
+import A from './typography/a';
 import BR from './typography/br';
+import Em from './typography/em';
+import Small from './typography/small';
+import Strong from './typography/strong';
+import S from './typography/s';
+import U from './typography/u';
 
 import Toolbar from './toolbar/toolbar';
 import ToolbarLeft from './toolbar/toolbar-left';
@@ -41,8 +46,13 @@ export { H4 };
 export { H5 };
 export { H6 };
 export { P };
-export { BR };
 export { A };
+export { BR };
+export { Em };
+export { Small };
+export { Strong };
+export { S };
+export { U };
 export { Toolbar };
 export { ToolbarTitle };
 export { ToolbarLeft };
@@ -72,8 +82,13 @@ export default {
   H5,
   H6,
   P,
-  BR,
   A,
+  BR,
+  Em,
+  Small,
+  Strong,
+  S,
+  U,
   Toolbar,
   ToolbarTitle,
   ToolbarLeft,
