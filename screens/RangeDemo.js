@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { carbonStyles, Content, Range } from '../src/index.js';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from '@expo/vector-icons/FontAwesome';
 
 const cs = StyleSheet.create(carbonStyles);
 
