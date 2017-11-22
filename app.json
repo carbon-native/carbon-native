@@ -11,6 +11,7 @@
     },
     "android": {
       "package": "com.getcarbonnative.kitchensink"
-    }
+    },
+    "primaryColor": "#FD7253"
   }
 }
