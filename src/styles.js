@@ -25,10 +25,10 @@ export const colors = {
 
 export const carbonStyles = {
   // container
-  // container: {
-  //   flex: 1,
-  //   // backgroundColor: '#F5FCFF',
-  // },
+  container: {
+    flex: 1,
+    // backgroundColor: '#F5FCFF',
+  },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
