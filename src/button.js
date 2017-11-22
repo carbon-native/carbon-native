@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+
 import {
   StyleSheet,
   Text,
@@ -7,180 +8,154 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { carbonStyles, colors } from './styles';
 
-const cs = StyleSheet.create(carbonStyles);
+import Color from 'color';
 
-const styles = StyleSheet.create({
-  base: {
-    flexDirection: 'row',
+import { colors } from './styles';
+
+const {
+  light,
+  stable,
+  primary,
+  calm,
+  secondary,
+  energized,
+  danger,
+  royal,
+  dark,
+} = colors;
+
+const sizes = {
+  xs: 6,
+  sm: 12,
+  md: 14,
+  lg: 20,
+  xl: 20,
+};
+
+const cs = StyleSheet.create({
+  button: {
     alignItems: 'center',
+    flex: 0,
     justifyContent: 'center',
-    padding: 12,
-    borderRadius: 2,
-  },
-  outline: {
-    borderWidth: 1,
-  },
-  clear: {
-    borderWidth: 0,
-    backgroundColor: 'transparent',
-  },
-  round: {
-    borderRadius: 50,
-  },
-  full: {
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderRadius: 0,
-  },
-  btnXsm: {
-    paddingHorizontal: 10,
-    paddingVertical: 4,
-  },
-  btnSm: {
-    paddingHorizontal: 4,
-    paddingVertical: 8,
-  },
-  btnTextSm: {
-    fontSize: 12,
-  },
-  btnLg: {
-    padding: 16,
-  },
-  btnTextLg: {
-    fontSize: 20,
   },
 });
 
-export default class Button extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
+export default function Button(props) {
+  const {
+    activeOpacity,
+    block: $block,
+    children,
+    clear,
+    color: $color,
+    full,
+    onPress,
+    outline,
+    round,
+    shadow: $shadow,
+    size: $size,
+    style,
+    text,
+    underlayColor,
+    ...passProps
+  } = props;
+
+  const size = sizes[$size] || $size;
+  const color = colors[$color] ? Color(colors[$color]) : Color($color);
+  const colorDark =
+    color.luminosity() > 0.1 ? color.darken(0.2) : color.lighten(0.5);
+  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+
+  const block = $block && { alignSelf: 'stretch' };
+  const backgroundColor = clear || outline ? 'transparent' : color;
+  const borderColor = outline ? color : backgroundColor;
+  const borderRadius = full ? 0 : round ? 50 : 2;
+  const borderWidth = outline ? 1 : 0;
+
+  let padding = { paddingHorizontal: 4, paddingVertical: 12 };
+  if (size > 14) padding = { padding: 16 };
+  if (size === 12) padding = { paddingHorizontal: 4, paddingVertical: 8 };
+  if (size === 6) padding = { paddingHorizontal: 10, paddingVertical: 4 };
+
+  const shadow = $shadow &&
+    !clear &&
+    !outline && {
+      elevation: 2,
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      shadowRadius: 2,
     };
-    this.highlight = this.highlight.bind(this);
-    this.unhighlight = this.unhighlight.bind(this);
-  }
+  const textColor = clear || outline ? color : luminosTextColor;
 
-  getTextColor(color, clear, outline) {
-    if (outline && this.state.active) {
-      return 'light';
-    } else if (outline && !this.state.active) {
-      return color;
-    } else if (clear && color && color !== 'light' && color !== 'stable') {
-      return color;
-    } else if (!clear && color && color !== 'light' && color !== 'stable') {
-      return 'light';
-    }
-    return null;
-  }
+  const buttonStyle = [
+    cs.button,
+    block,
+    { backgroundColor },
+    { borderColor },
+    { borderRadius },
+    { borderWidth },
+    padding,
+    shadow,
+    style,
+  ];
 
-  highlight() {
-    this.setState({ active: true });
-  }
+  const textStyle = {
+    color: textColor,
+    fontSize: size,
+  };
 
-  unhighlight() {
-    this.setState({ active: false });
-  }
+  const content = children || <Text style={textStyle}>{text}</Text>;
 
-  capitalizeFirstLetter(string) {
-    return string[0].toUpperCase() + string.slice(1);
-  }
-
-  render() {
-    const contents = this.props.text ? this.props.text : this.props.children;
-    const size = this.props.size
-      ? `btn${this.capitalizeFirstLetter(this.props.size)}`
-      : null;
-    const full = this.props.full ? 'full' : null;
-    const round = this.props.round ? 'round' : null;
-    const clear = this.props.clear ? 'clear' : null;
-    const outline = this.props.outline ? 'outline' : null;
-    const color = this.props.color || null;
-    const bgColor = color && !outline ? `${color}Bg` : 'transparent';
-    const bgActiveColor = color ? `${color}Active` : null;
-    const textSize = this.props.size
-      ? `btnText${this.capitalizeFirstLetter(this.props.size)}`
-      : null;
-    const textColor = this.getTextColor(color, clear, outline);
-
-    if (clear) {
-      return (
-        <TouchableOpacity {...this.props} style={{ borderRadius: 2 }}>
-          <View
-            style={[
-              cs.container,
-              styles.base,
-              size && styles[size],
-              full && styles[full],
-              clear && styles[clear],
-              this.props.style,
-            ]}
-          >
-            <Text
-              style={[
-                textColor && cs[textColor],
-                textSize && styles[textSize],
-                cs.row,
-              ]}
-            >
-              {contents}
-            </Text>
-          </View>
-        </TouchableOpacity>
-      );
-    }
+  if (clear) {
     return (
-      <TouchableHighlight
-        underlayColor={colors[bgActiveColor]}
-        activeOpacity={1}
-        onShowUnderlay={this.highlight}
-        onHideUnderlay={this.unhighlight}
-        {...this.props}
-        style={[
-          bgColor && cs[bgColor],
-          !full && { borderRadius: 2 },
-          round && styles[round],
-        ]}
-      >
-        <View
-          style={[
-            cs.container,
-            styles.base,
-            size && styles[size],
-            full && styles[full],
-            outline && styles[outline],
-            outline && { borderColor: colors[`${color}Active`] },
-            this.props.style,
-          ]}
-        >
-          <Text
-            style={[
-              textColor && cs[textColor],
-              textSize && styles[textSize],
-              cs.row,
-            ]}
-          >
-            {contents}
-          </Text>
-        </View>
-      </TouchableHighlight>
+      <TouchableOpacity onPress={onPress} style={buttonStyle} {...passProps}>
+        <View>{content}</View>
+      </TouchableOpacity>
     );
   }
+
+  return (
+    <TouchableHighlight
+      activeOpacity={activeOpacity}
+      onPress={onPress}
+      style={buttonStyle}
+      underlayColor={underlayColor || colorDark}
+      {...passProps}
+    >
+      <View>{content}</View>
+    </TouchableHighlight>
+  );
 }
 
 Button.propTypes = {
+  activeOpacity: PropTypes.number,
+  block: PropTypes.bool,
   children: PropTypes.node,
-  text: PropTypes.string,
-  size: PropTypes.string,
-  full: PropTypes.bool,
-  round: PropTypes.bool,
   clear: PropTypes.bool,
+  color: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  onPress: PropTypes.func,
   outline: PropTypes.bool,
-  color: PropTypes.string,
-  style: PropTypes.any,
+  round: PropTypes.bool,
+  shadow: PropTypes.bool,
+  size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  text: PropTypes.string,
+  underlayColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
+
 Button.defaultProps = {
-  color: 'stable',
+  activeOpacity: 1,
+  block: false,
+  children: null,
+  clear: false,
+  color: colors.stable,
+  onPress: () => alert('Attach an onPress prop'),
+  outline: false,
+  round: false,
+  shadow: true,
+  size: sizes.md,
+  style: null,
+  text: 'Press Me',
+  underlayColor: null,
 };
