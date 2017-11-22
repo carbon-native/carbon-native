@@ -1,5 +1,7 @@
 # Carbon Native
 
+[![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native)
+
 ## Get Started
 
 ### Installation

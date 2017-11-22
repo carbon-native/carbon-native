@@ -1,5 +1,7 @@
 # Carbon Native
 
+[![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native)
+
 **A set of UI components for building React Native apps**
 
 Check out the [demo app](https://github.com/carbon-native/kitchen-sink).
