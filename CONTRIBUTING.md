@@ -16,7 +16,7 @@ You can find the raw Carbon Native components under `./src` the Kitchen Sink dem
 
 **Notes on Deployment**
 
-To deploy Carbon Native we use a shell script that ultimately just publishes to NPM. Only specified organizations admins should have access to publish on NPM:
+To deploy Carbon Native we use a shell script (`publish.sh`) that ultimately just publishes to NPM. Only specified organizations admins should have access to publish on NPM:
 - Tyler Buchea
 - Josh Buchea
 
