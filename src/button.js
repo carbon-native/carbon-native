@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
+  Platform,
   StyleSheet,
   Text,
   TouchableHighlight,
@@ -63,7 +64,7 @@ export default function Button(props) {
   const size = sizes[$size] || $size;
   const color = colors[$color] ? Color(colors[$color]) : Color($color);
   const colorDark =
-    color.luminosity() > 0.1 ? color.darken(0.2) : color.lighten(0.5);
+    color.luminosity() > 0.2 ? color.darken(0.2) : color.lighten(0.5);
   const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
 
   const block = $block && { alignSelf: 'stretch' };
