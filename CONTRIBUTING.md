@@ -20,6 +20,10 @@ To deploy Carbon Native we use a shell script that ultimately just publishes to 
 - Tyler Buchea
 - Josh Buchea
 
+To deploy the Kitchen Sink app to Expo you will need the Expo CLI tool `npm install -g exp` after that you can run `exp publish`. Only specified organizations admins should have access to publish on Expo:
+- Tyler Buchea
+- Josh Buchea
+
 ## Setup
 
 ```bash
