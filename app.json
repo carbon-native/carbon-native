@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Carbon Native Kitchen Sink",
-    "icon": "./path/to/your/app-icon.png",
+    "icon": "./app-icon.png",
     "version": "2.0.0",
     "slug": "carbon-native-kitchen-sink",
     "sdkVersion": "22.0.0",
