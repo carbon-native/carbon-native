@@ -63,9 +63,11 @@ export default function Button(props) {
 
   const size = sizes[$size] || $size;
   const color = colors[$color] ? Color(colors[$color]) : Color($color);
-  const colorDark =
-    color.luminosity() > 0.2 ? color.darken(0.2) : color.lighten(0.5);
-  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+  const luminosity = color.luminosity();
+  const colorDark = outline
+    ? color.alpha(0.3)
+    : luminosity > 0.2 ? color.darken(0.2) : color.lighten(0.5);
+  const luminosTextColor = luminosity < 0.5 ? '#fff' : '#000';
 
   const block = $block && { alignSelf: 'stretch' };
   const backgroundColor = clear || outline ? 'transparent' : color;
