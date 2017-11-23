@@ -108,14 +108,6 @@ export default function ButtonsDemo() {
         <View style={cs.marginBottom}>
           <Button color="dark" text="Dark Clear" onPress={() => {}} clear />
         </View>
-        <View style={cs.marginBottom}>
-          <Button1
-            color="stable"
-            text="Stable Clear"
-            onPress={() => {}}
-            clear
-          />
-        </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Round</H3>
@@ -164,21 +156,6 @@ export default function ButtonsDemo() {
         <View style={cs.marginBottom}>
           <Button color="dark" text="Dark" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="stable" text="Stable" onPress={() => {}} />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="primary" text="Primary" onPress={() => {}} />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="secondary" text="Secondary" onPress={() => {}} />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="danger" text="Danger" onPress={() => {}} />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="dark" text="Dark" onPress={() => {}} />
-        </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Full</H3>
@@ -202,31 +179,6 @@ export default function ButtonsDemo() {
         </View>
         <View style={cs.marginBottom}>
           <Button color="dark" text="Dark Full" onPress={() => {}} full />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="stable" text="Stable Full" onPress={() => {}} full />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1
-            color="primary"
-            text="Primary Full"
-            onPress={() => {}}
-            full
-          />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1
-            color="secondary"
-            text="Secondary Full"
-            onPress={() => {}}
-            full
-          />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="danger" text="Danger Full" onPress={() => {}} full />
-        </View>
-        <View style={cs.marginBottom}>
-          <Button1 color="dark" text="Dark Full" onPress={() => {}} full />
         </View>
       </View>
 
