@@ -7,8 +7,8 @@ import {
   Container,
   Button,
   BR,
+  FloatingActionButton,
 } from '../src/index.js';
-import ActionButton from '../src/action-button';
 import Button1 from '../src/button.1.js';
 import Icon from '@expo/vector-icons/FontAwesome';
 
@@ -25,9 +25,11 @@ const styles = StyleSheet.create({
 export default function ButtonsDemo() {
   return (
     <Container>
-      <ActionButton onPress={() => alert('I am an ActionButton!')}>
+      <FloatingActionButton
+        onPress={() => alert('I am an FloatingActionButton!')}
+      >
         <Icon name="star" size={22} style={{ color: 'white' }} />
-      </ActionButton>
+      </FloatingActionButton>
       <Content>
         <View style={cs.padding}>
           <View style={cs.marginBottom}>

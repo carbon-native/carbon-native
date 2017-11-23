@@ -18,6 +18,8 @@ import ToolbarLeft from './toolbar/toolbar-left';
 import ToolbarRight from './toolbar/toolbar-right';
 import ToolbarTitle from './toolbar/toolbar-title';
 
+import FloatingActionButton from './floating-action-button';
+
 import Button from './button';
 import Card from './card';
 import Badge from './badge';

@@ -17,7 +17,7 @@ const {
   dark,
 } = colors;
 
-export default function ActionButton(props) {
+export default function FloatingActionButton(props) {
   const {
     buttonStyles,
     children,
@@ -83,7 +83,7 @@ export default function ActionButton(props) {
   );
 }
 
-ActionButton.propTypes = {
+FloatingActionButton.propTypes = {
   children: PropTypes.node,
   color: PropTypes.string,
   icon: PropTypes.any,
@@ -91,7 +91,7 @@ ActionButton.propTypes = {
   shadow: PropTypes.bool,
 };
 
-ActionButton.defaultProps = {
+FloatingActionButton.defaultProps = {
   color: colors.primary,
   onPress: () => alert('Attach an onPress prop'),
   pointerEvents: 'box-none',
