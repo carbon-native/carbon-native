@@ -45,7 +45,10 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "keywords": ["react-native", "ui"],
+  "keywords": [
+    "react-native",
+    "ui"
+  ],
   "peerDepenecies": {
     "react": ">=16.0.0-beta.5",
     "react-native": ">=0.49.5",
@@ -69,6 +72,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "color": "^2.0.1",
     "expo": "^22.0.2",
     "react": "16.0.0-beta.5",
     "react-native": "^0.49.5"
