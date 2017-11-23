@@ -16,7 +16,7 @@ npm install carbon-native --save
 
 ### Badge
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/badge.png" width="375" height="auto" alt="Badge">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/badge.png" width="375" height="auto" alt="Badge">
 
 ```jsx
 import {
@@ -31,7 +31,7 @@ import {
 
 ### Buttons
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/buttons.png" width="375" height="auto" alt="Buttons">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/buttons.png" width="375" height="auto" alt="Buttons">
 
 ```jsx
 import {
@@ -58,7 +58,7 @@ import {
 
 ### Card
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/card.png" width="375" height="auto" alt="Card">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/card.png" width="375" height="auto" alt="Card">
 
 ```jsx
 import {
@@ -76,7 +76,7 @@ import {
 
 ### Lists
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
 
 ```jsx
 import {
@@ -100,7 +100,7 @@ import {
 
 ### Range
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/range.png" width="375" height="auto" alt="Range">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/range.png" width="375" height="auto" alt="Range">
 
 ```jsx
 import {
@@ -115,7 +115,7 @@ import {
 
 ### Toggle
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toggle.png" width="375" height="auto" alt="Toggle">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/toggle.png" width="375" height="auto" alt="Toggle">
 
 ```jsx
 import {
@@ -131,7 +131,7 @@ import {
 
 ### Toolbar
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/toolbar.png" width="375" height="auto" alt="Toolbar">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/toolbar.png" width="375" height="auto" alt="Toolbar">
 
 ```jsx
 import {
@@ -146,7 +146,7 @@ import {
 
 ### Typography
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/typography.png" width="375" height="auto" alt="Typography">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/typography.png" width="375" height="auto" alt="Typography">
 
 ```jsx
 import {
