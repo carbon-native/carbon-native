@@ -31,6 +31,10 @@ export const carbonStyles = {
   },
   row: {
     flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+
+  justifyCenter: {
     justifyContent: 'center',
   },
 

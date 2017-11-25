@@ -37,8 +37,8 @@ const sizes = {
 const cs = StyleSheet.create({
   button: {
     alignItems: 'center',
-    flex: 0,
     justifyContent: 'center',
+    flexDirection: 'row',
   },
 });
 
@@ -73,13 +73,13 @@ export default class Button extends React.Component {
     const colorDark = luminosity > 0.2 ? color.darken(0.2) : color.lighten(0.5);
     const luminosTextColor = luminosity < 0.5 ? '#fff' : '#000';
 
-    const block = $block && { alignSelf: 'stretch' };
     const backgroundColor = clear || outline ? 'transparent' : color;
     const borderColor = outline ? color : backgroundColor;
     const borderRadius = full ? 0 : round ? 50 : 2;
     const borderWidth = outline ? 1 : 0;
+    const width = full || $block ? '100%' : 'auto';
 
-    let padding = { paddingHorizontal: 4, paddingVertical: 12 };
+    let padding = { paddingHorizontal: 12, paddingVertical: 12 };
     if (size > 14) padding = { padding: 16 };
     if (size === 12) padding = { paddingHorizontal: 4, paddingVertical: 8 };
     if (size === 6) padding = { paddingHorizontal: 10, paddingVertical: 4 };
@@ -99,7 +99,6 @@ export default class Button extends React.Component {
 
     const buttonStyle = [
       cs.button,
-      block,
       { backgroundColor },
       { borderColor },
       { borderRadius },
@@ -107,6 +106,7 @@ export default class Button extends React.Component {
       padding,
       shadow,
       style,
+      { width },
     ];
 
     const textStyle = { color: textColor, fontSize: size };

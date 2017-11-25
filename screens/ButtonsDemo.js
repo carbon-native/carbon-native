@@ -25,166 +25,166 @@ export default function ButtonsDemo() {
   return (
     <Content>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="stable" text="Stable" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="primary" text="Primary" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="secondary" text="Secondary" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="danger" text="Danger" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="dark" text="Dark" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Outline</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            outline
             color="stable"
             text="Stable Outline"
             onPress={() => {}}
-            outline
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            outline
             color="primary"
             text="Primary Outline"
             onPress={() => {}}
-            outline
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            outline
             color="secondary"
             text="Secondary Outline"
             onPress={() => {}}
-            outline
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            outline
             color="danger"
             text="Danger Outline"
             onPress={() => {}}
-            outline
           />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="dark" text="Dark Outline" onPress={() => {}} outline />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button outline color="dark" text="Dark Outline" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Clear</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="stable" text="Stable Clear" onPress={() => {}} clear />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            clear
             color="primary"
             text="Primary Clear"
             onPress={() => {}}
-            clear
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            clear
             color="secondary"
             text="Secondary Clear"
             onPress={() => {}}
-            clear
           />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="danger" text="Danger Clear" onPress={() => {}} clear />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button clear color="danger" text="Danger Clear" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="dark" text="Dark Clear" onPress={() => {}} clear />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button clear color="dark" text="Dark Clear" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Round</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="stable" text="Stable Round" onPress={() => {}} round />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            round
             color="primary"
             text="Primary Round"
             onPress={() => {}}
-            round
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            round
             color="secondary"
             text="Secondary Round"
             onPress={() => {}}
-            round
           />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="danger" text="Danger Round" onPress={() => {}} round />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button round color="danger" text="Danger Round" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="dark" text="Dark Round" onPress={() => {}} round />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button round color="dark" text="Dark Round" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Block</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
-          <Button color="stable" text="Stable" onPress={() => {}} />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button block color="stable" text="Stable" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="primary" text="Primary" onPress={() => {}} />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button block color="primary" text="Primary" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="secondary" text="Secondary" onPress={() => {}} />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button block color="secondary" text="Secondary" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="danger" text="Danger" onPress={() => {}} />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button block color="danger" text="Danger" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="dark" text="Dark" onPress={() => {}} />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button block color="dark" text="Dark" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Full</H3>
       <View style={cs.paddingVertical}>
-        <View style={cs.marginBottom}>
-          <Button color="stable" text="Stable Full" onPress={() => {}} full />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button full color="stable" text="Stable Full" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="primary" text="Primary Full" onPress={() => {}} full />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button full color="primary" text="Primary Full" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
+            full
             color="secondary"
             text="Secondary Full"
             onPress={() => {}}
-            full
           />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="danger" text="Danger Full" onPress={() => {}} full />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button full color="danger" text="Danger Full" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
-          <Button color="dark" text="Dark Full" onPress={() => {}} full />
+        <View style={[cs.row, cs.marginBottom]}>
+          <Button full color="dark" text="Dark Full" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Sizes</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
             color="stable"
             text="Stable Small"
@@ -192,7 +192,7 @@ export default function ButtonsDemo() {
             onPress={() => {}}
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
             color="primary"
             text="Primary Small"
@@ -200,52 +200,52 @@ export default function ButtonsDemo() {
             onPress={() => {}}
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button
             color="secondary"
             text="Secondary Medium"
             onPress={() => {}}
           />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="danger" text="Danger Medium" onPress={() => {}} />
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="dark" text="Dark Large" size="lg" onPress={() => {}} />
         </View>
       </View>
 
       <H3 style={styles.sectionHeader}>Icons</H3>
       <View style={cs.padding}>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="stable" onPress={() => {}}>
             <Text style={{ color: 'black' }}>
               <Icon name="space-shuttle" size={22} /> Stable
             </Text>
           </Button>
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="primary" onPress={() => {}}>
             <Text style={{ color: 'white' }}>
               <Icon name="home" size={22} /> Primary
             </Text>
           </Button>
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="secondary" onPress={() => {}}>
             <Text style={{ color: 'black' }}>
               <Icon name="users" size={22} /> Secondary
             </Text>
           </Button>
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="danger" onPress={() => {}}>
             <Text style={{ color: 'white' }}>
               <Icon name="pencil" size={22} /> Danger
             </Text>
           </Button>
         </View>
-        <View style={cs.marginBottom}>
+        <View style={[cs.row, cs.marginBottom]}>
           <Button color="dark" onPress={() => {}}>
             <Text style={{ color: 'white' }}>
               <Icon name="trash" size={22} /> Dark
