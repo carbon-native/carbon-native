@@ -110,6 +110,26 @@ import {
 
 **[⬆ back to top](#components)**
 
+### Icons
+
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
+
+```sh
+npm install react-native-vector-icons --save
+rnpm link
+```
+
+```jsx
+import Icon 'react-native-vector-icons/FontAwesome';
+
+<Icon
+  name="volume-down"
+  size={24}
+/>
+```
+
+**[⬆ back to top](#components)**
+
 ### List
 
 <img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/list.png" width="375" height="auto" alt="List">
