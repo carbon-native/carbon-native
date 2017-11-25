@@ -13,7 +13,7 @@
 ## Get Started
 
 ```sh
-npm install carbon-native --save
+yarn add carbon-native
 ```
 
 ## Components
