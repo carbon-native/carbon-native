@@ -1,10 +1,16 @@
 # Carbon Native
 
+**A set of UI components for building React Native apps**
+
 [![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native)
 
 ## Get Started
 
 ### Installation
+
+```sh
+npm install carbon-native --save
+```
 
 ### Usage
 
@@ -38,6 +44,12 @@
   - [x] H6
   - [x] P
   - [x] A
+  - [x] BR
+  - [x] Em
+  - [x] Small
+  - [x] Strong
+  - [x] S
+  - [x] U
 
 ## Documentation
 
@@ -45,13 +57,12 @@ View the full docs here
 
 ## Demo App
 
-Run the pre built and configured React Native Elements App on Expo which uses all of the React Native Elements components.
+Run the pre built and configured Carbon Native Kitchen Sink App on Expo which uses all of the Carbon Native components.
 
 Also checkout the example/ folder to view the implementation & run the expo app locally.
 
 ## Roadmap
 
-- [ ] BR
 - [ ] Checkbox
 - [ ] Inputs (input, select, checkbox, radio, searchbar, etc.)
 - [ ] Keyboard Spacer?
