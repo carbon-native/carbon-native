@@ -1,5 +1,6 @@
 #!/bin/bash
 yarn test
+cd dist
 
 echo "patch, minor, or major release? "
 read release_type
@@ -18,10 +19,6 @@ echo "Are you sure you want to publish $version (yes\no)? "
 read yesno
 
 if [ "$yesno" == "yes" ] ; then
-    git add .
-    git commit -m ":tada: New release $version"
-    git tag -a $version -m "$version"
     git push --follow-tags
-    cd dist
     npm publish
 fi
