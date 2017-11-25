@@ -17,8 +17,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "package-json": "node ./scripts/package-json.js",
-    "build": "npm run clean && babel ./src --out-dir dist && npm run package-json",
-    "build-watch": "npm run build && babel ./src --watch --out-dir ./dist",
+    "copy-static-files": "node ./scripts/copy-static-files.js",
+    "build":
+      "yarn clean && babel ./src --out-dir dist && yarn package-json && yarn copy-static-files",
+    "build-watch": "yarn build && babel ./src --watch --out-dir ./dist",
     "precommit": "lint-staged",
     "test": "jest",
     "start-dist": "NODE_ENV=production && react-native-scripts start",
@@ -45,10 +47,7 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "keywords": [
-    "react-native",
-    "ui"
-  ],
+  "keywords": ["react-native", "ui"],
   "peerDepenecies": {
     "react": ">=16.0.0-beta.5",
     "react-native": ">=0.49.5",
