@@ -8,6 +8,7 @@ const cs = StyleSheet.create(carbonStyles);
 const styles = StyleSheet.create({
   default: {
     // margin: 10,
+    elevation: 2,
     marginBottom: 20,
     borderRadius: 2,
     backgroundColor: '#fff',
