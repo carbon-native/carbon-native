@@ -201,7 +201,7 @@ import {
 
 ## Contribute
 
-https://github.com/carbon-native/carbon-native
+[Contribution guidelines for this project](CONTRIBUTING.md)
 
 ## License
 
