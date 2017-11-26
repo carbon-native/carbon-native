@@ -41,7 +41,7 @@ Card.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
-  padding: PropTypes.oneOfType([PropTypes.bool, PropTypes.numer]),
+  padding: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   style: PropTypes.any,
 };
 Card.defaultProps = {
