@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, Text } from 'react-native';
+import { Linking, StyleSheet, Text } from 'react-native';
 import { colors } from '../styles';
 
 const styles = StyleSheet.create({
@@ -10,9 +10,16 @@ const styles = StyleSheet.create({
 });
 
 export default function A(props) {
+  const { children, href, onPress, style, ...passProps } = props;
+  const onPressAction = href ? () => Linking.openURL(href) : onPress;
+
   return (
-    <Text {...props} style={[styles.default, props.style]}>
-      {props.children}
+    <Text
+      style={[styles.default, style]}
+      onPress={onPressAction}
+      {...passProps}
+    >
+      {children}
     </Text>
   );
 }
@@ -23,6 +30,9 @@ A.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  onPress: PropTypes.func,
   style: PropTypes.any,
 };
-A.defaultProps = {};
+A.defaultProps = {
+  onPress: () => alert('Add an href prop with a url'),
+};

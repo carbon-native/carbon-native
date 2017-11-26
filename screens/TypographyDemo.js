@@ -8,6 +8,7 @@ import {
   H5,
   H6,
   P,
+  A,
   BR,
   Em,
   Small,
@@ -29,6 +30,7 @@ export default function TypographyDemo() {
       <H5>I'm an H5!</H5>
       <H6>I'm an H6!</H6>
       <P>I'm a paragraph with some text!</P>
+      <A href="http://getcarbonnative.com">I'm a link!</A>
       <BR />
       <P>This line is preceeded by a break</P>
       <P>
