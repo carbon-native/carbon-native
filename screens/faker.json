@@ -3,7 +3,7 @@
   "BarsDemo": [],
   "ButtonsDemo": [],
   "CardDemo": [],
-  "ListsDemo": [],
+  "ListDemo": [],
   "ToggleDemo": [
     { "name": "frodo", "color": "", "active": true },
     { "name": "sam", "color": "", "active": false },
