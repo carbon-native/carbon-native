@@ -43,6 +43,7 @@ yarn add carbon-native
   - [x] Strong
   - [x] S
   - [x] U
+  - [x] Mark
 
 ### Badge
 
@@ -259,6 +260,9 @@ import {
 </P>
 <P>
   <U>This line has an underline.</U>
+</P>
+<P>
+  Use the Mark component to <Mark>highlight</Mark> text
 </P>
 ```
 
