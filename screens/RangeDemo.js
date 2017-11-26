@@ -34,17 +34,12 @@ export default function RangeDemo() {
         <RangeExample />
         <Icon name="volume-up" size={24} />
       </View>
-
-      <RangeExample minimumTrackTintColor={carbonStyles.secondary.color} />
-      <RangeExample minimumTrackTintColor={carbonStyles.danger.color} />
-      <RangeExample minimumTrackTintColor={carbonStyles.royal.color} />
-      <RangeExample minimumTrackTintColor={carbonStyles.energized.color} />
-      <RangeExample minimumTrackTintColor={carbonStyles.calm.color} />
-
-      <RangeExample
-        minimumTrackTintColor={'red'}
-        maximumTrackTintColor={'green'}
-      />
+      <RangeExample color={carbonStyles.secondary.color} />
+      <RangeExample color={carbonStyles.danger.color} />
+      <RangeExample color={carbonStyles.royal.color} />
+      <RangeExample color={carbonStyles.energized.color} />
+      <RangeExample color={carbonStyles.calm.color} />
+      <RangeExample color={'red'} maximumTrackTintColor={'green'} />
     </Content>
   );
 }

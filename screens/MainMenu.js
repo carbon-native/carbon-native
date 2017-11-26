@@ -14,12 +14,12 @@ import {
 const cs = StyleSheet.create(carbonStyles);
 
 const navigationItems = [
-  { name: 'Alerts', icon: 'exclamation-triangle' },
+  // { name: 'Alerts', icon: 'exclamation-triangle' },
   { name: 'Badge', icon: 'certificate' },
   { name: 'Buttons', icon: 'circle' },
   { name: 'Card', icon: 'clone' },
   { name: 'Icons', icon: 'heart' },
-  { name: 'Lists', icon: 'list' },
+  { name: 'List', icon: 'list' },
   // { name: 'Modal', icon: 'sticky-note-o' },
   { name: 'Range', icon: 'sliders' },
   { name: 'Toggle', icon: 'toggle-on' },

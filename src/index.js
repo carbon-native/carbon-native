@@ -12,6 +12,7 @@ import Small from './typography/small';
 import Strong from './typography/strong';
 import S from './typography/s';
 import U from './typography/u';
+import Mark from './typography/mark';
 
 import Toolbar from './toolbar/toolbar';
 import ToolbarLeft from './toolbar/toolbar-left';
@@ -54,7 +55,10 @@ export { Em };
 export { Small };
 export { Strong };
 export { S };
+export { S as Del };
 export { U };
+export { U as Ins };
+export { Mark };
 export { Toolbar };
 export { ToolbarTitle };
 export { ToolbarLeft };
@@ -91,7 +95,10 @@ export default {
   Small,
   Strong,
   S,
+  Del: S,
   U,
+  Ins: U,
+  Mark,
   Toolbar,
   ToolbarTitle,
   ToolbarLeft,

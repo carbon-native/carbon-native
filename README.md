@@ -4,7 +4,7 @@
 
 [![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native)
 
-**Demo App:**
+## Demo App
 
 - [Expo](https://expo.io/@tylerbuchea/carbon-native-kitchen-sink)
 - [Apple App Store](https://itunes.apple.com/us/app/carbon-native-kitchen-sink/id1137214677)
@@ -17,6 +17,33 @@ yarn add carbon-native
 ```
 
 ## Components
+
+- [x] [Badge](#badge)
+- [x] [Buttons](#buttons)
+- [x] [Card](#card)
+- [x] Container
+- [x] Content
+- [x] [Icons](#icons)
+- [x] [List](#list)
+- [x] [Range](#range)
+- [x] [Toggle](#toggle)
+- [x] [Toolbar](#toolbar)
+- [x] [Typography](#typography)
+  - [x] H1
+  - [x] H2
+  - [x] H3
+  - [x] H4
+  - [x] H5
+  - [x] H6
+  - [x] P
+  - [x] A
+  - [x] BR
+  - [x] Em
+  - [x] Small
+  - [x] Strong
+  - [x] S
+  - [x] U
+  - [x] Mark
 
 ### Badge
 
@@ -32,6 +59,8 @@ import {
   text="4"
 />
 ```
+
+**[⬆ back to top](#components)**
 
 ### Buttons
 
@@ -60,6 +89,8 @@ import {
 />
 ```
 
+**[⬆ back to top](#components)**
+
 ### Card
 
 <img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/card.png" width="375" height="auto" alt="Card">
@@ -78,12 +109,35 @@ import {
 </Card>
 ```
 
-### Lists
+**[⬆ back to top](#components)**
 
-<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/lists.png" width="375" height="auto" alt="Lists">
+### Icons
+
+<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
+
+```sh
+npm install react-native-vector-icons --save
+rnpm link
+```
+
+```jsx
+import Icon 'react-native-vector-icons/FontAwesome';
+
+<Icon
+  name="volume-down"
+  size={24}
+/>
+```
+
+**[⬆ back to top](#components)**
+
+### List
+
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/list.png" width="375" height="auto" alt="List">
 
 ```jsx
 import {
+  List,
   Item,
   ItemIcon,
   ItemContent,
@@ -91,16 +145,20 @@ import {
   Note,
 } from 'carbon-native';
 
-<Item>
-  <ItemIcon>
-    <Icon name="bolt" size={24} />
-  </ItemIcon>
-  <ItemContent>
-    <ItemText>Harry</ItemText>
-    <Note>The boy who lived</Note>
-  </ItemContent>
-</Item>
+<List>
+  <Item>
+    <ItemIcon>
+      <Icon name="bolt" size={24} />
+    </ItemIcon>
+    <ItemContent>
+      <ItemText>Harry</ItemText>
+      <Note>The boy who lived</Note>
+    </ItemContent>
+  </Item>
+</List>
 ```
+
+**[⬆ back to top](#components)**
 
 ### Range
 
@@ -116,6 +174,8 @@ import {
   onValueChange={(value) => this.setState({ value })}
 />
 ```
+
+**[⬆ back to top](#components)**
 
 ### Toggle
 
@@ -133,6 +193,8 @@ import {
 />
 ```
 
+**[⬆ back to top](#components)**
+
 ### Toolbar
 
 <img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/toolbar.png" width="375" height="auto" alt="Toolbar">
@@ -147,6 +209,8 @@ import {
   <ToolbarTitle color="light">Primary</ToolbarTitle>
 </Toolbar>
 ```
+
+**[⬆ back to top](#components)**
 
 ### Typography
 
@@ -197,7 +261,12 @@ import {
 <P>
   <U>This line has an underline.</U>
 </P>
+<P>
+  Use the Mark component to <Mark>highlight</Mark> text
+</P>
 ```
+
+**[⬆ back to top](#components)**
 
 ## Contribute
 

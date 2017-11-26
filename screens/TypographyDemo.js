@@ -13,7 +13,10 @@ import {
   Small,
   Strong,
   S,
+  Del,
   U,
+  Ins,
+  Mark,
 } from '../src/index.js';
 
 export default function TypographyDemo() {
@@ -46,6 +49,9 @@ export default function TypographyDemo() {
       </P>
       <P>
         <U>This line has an underline.</U>
+      </P>
+      <P>
+        Use the Mark component to <Mark>highlight</Mark> text
       </P>
     </Content>
   );

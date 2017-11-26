@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   text: {
     backgroundColor: 'transparent',
     textAlign: 'center',
-    fontWeight: 'bold',
+    fontWeight: '600',
     fontSize: 14,
   },
 });
@@ -49,5 +49,5 @@ Badge.propTypes = {
   text: PropTypes.string,
 };
 Badge.defaultProps = {
-  color: 'stable',
+  color: 'primary',
 };

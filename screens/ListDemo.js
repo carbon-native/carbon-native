@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function ListsDemo() {
+export default function ListDemo() {
   return (
     <Content>
       <List>
@@ -157,7 +157,7 @@ export default function ListsDemo() {
         </Item>
 
         <Item>
-          <ItemContent>
+          <ItemContent line={false}>
             <ItemText>Taylor Swift</ItemText>
           </ItemContent>
         </Item>

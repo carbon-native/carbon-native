@@ -12,6 +12,7 @@ import Small from './small';
 import Strong from './strong';
 import S from './s';
 import U from './u';
+import Mark from './mark';
 
 export { H1 };
 export { H2 };
@@ -26,7 +27,10 @@ export { Em };
 export { Small };
 export { Strong };
 export { S };
+export { S as Del };
 export { U };
+export { U as Ins };
+export { Mark };
 
 export default {
   H1,
@@ -42,5 +46,8 @@ export default {
   Small,
   Strong,
   S,
+  Del: S,
   U,
+  Ins: U,
+  Mark,
 };
