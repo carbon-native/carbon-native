@@ -2,20 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, View } from 'react-native';
 import Color from 'color';
-
 import { colors } from './styles';
-
-const {
-  light,
-  stable,
-  primary,
-  calm,
-  secondary,
-  energized,
-  danger,
-  royal,
-  dark,
-} = colors;
 
 export default function FloatingActionButton(props) {
   const {
@@ -29,7 +16,7 @@ export default function FloatingActionButton(props) {
     ...passProps
   } = props;
 
-  const color = colors[$color] ? Color(colors[$color]) : Color($color);
+  const color = Color(colors[$color] || $color);
 
   const shadow = $shadow && {
     elevation: 3,
@@ -84,7 +71,11 @@ export default function FloatingActionButton(props) {
 }
 
 FloatingActionButton.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   color: PropTypes.string,
   icon: PropTypes.any,
   onPress: PropTypes.func,
@@ -92,7 +83,7 @@ FloatingActionButton.propTypes = {
 };
 
 FloatingActionButton.defaultProps = {
-  color: colors.primary,
+  color: 'primary',
   onPress: () => alert('Attach an onPress prop'),
   pointerEvents: 'box-none',
   shadow: true,

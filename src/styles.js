@@ -1,26 +1,19 @@
 import { StyleSheet, Platform } from 'react-native';
+import MaterialColors from './material-colors';
 
 // colors
 // light, stable, primary, calm, secondary, energized, danger, royal, dark
 export const colors = {
   light: '#fff',
-  lightActive: '#fff', // @todo: update active color
   stable: '#f8f8f8',
-  stableActive: '#e0e0e0',
   primary: '#337AF9',
-  primaryActive: '#3474e1',
   calm: '#11c1f3',
-  calmActive: '#11c1f3', // @todo: update active color
   secondary: '#22DD5E',
-  secondaryActive: '#2ec95c',
   energized: '#FFC600',
-  energizedActive: '#FFC600', // @todo: update active color
   danger: '#F83B36',
-  dangerActive: '#e13838',
   royal: '#7E59FF',
-  royalActive: '#7E59FF', // @todo: update active color
   dark: '#222',
-  darkActive: '#343434',
+  ...MaterialColors,
 };
 
 export const carbonStyles = {

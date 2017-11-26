@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ScrollView, StyleSheet, View } from 'react-native';
-import { carbonStyles } from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   default: {
@@ -12,22 +9,25 @@ const styles = StyleSheet.create({
 });
 
 export default function Content(props) {
-  const contentStyle = [
-    styles.default,
-    props.padding && cs.padding,
-    props.style,
-  ];
+  const { children, padding: $padding, scroll, style, ...passProps } = props;
 
-  if (props.scroll === true) {
+  let padding;
+  if ($padding === true) padding = 10;
+  else if ($padding === false) padding = 0;
+  else padding = $padding;
+
+  const contentStyle = [styles.default, { padding }, style];
+
+  if (scroll) {
     return (
-      <ScrollView {...props} style={contentStyle}>
-        {props.children}
+      <ScrollView style={contentStyle} {...passProps}>
+        {children}
       </ScrollView>
     );
   }
   return (
-    <View {...props} style={contentStyle}>
-      {props.children}
+    <View style={contentStyle} {...passProps}>
+      {children}
     </View>
   );
 }
@@ -37,10 +37,11 @@ Content.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  padding: PropTypes.bool,
+  padding: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   scroll: PropTypes.bool,
   style: PropTypes.any,
 };
 Content.defaultProps = {
+  padding: false,
   scroll: true,
 };

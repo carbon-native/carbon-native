@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
-import { carbonStyles } from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   default: {
@@ -12,12 +9,16 @@ const styles = StyleSheet.create({
 });
 
 export default function Container(props) {
+  const { children, padding: $padding, style, ...passProps } = props;
+
+  let padding;
+  if ($padding === true) padding = 10;
+  else if ($padding === false) padding = 0;
+  else padding = $padding;
+
   return (
-    <View
-      {...props}
-      style={[styles.default, props.padding && cs.padding, props.style]}
-    >
-      {props.children}
+    <View style={[styles.default, { padding }, style]} {...passProps}>
+      {children}
     </View>
   );
 }
@@ -26,8 +27,11 @@ Container.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.string,
   ]),
-  padding: PropTypes.bool,
+  padding: PropTypes.oneOfType([PropTypes.bool, PropTypes.number]),
   style: PropTypes.any,
 };
-Container.defaultProps = {};
+Container.defaultProps = {
+  padding: false,
+};

@@ -4,15 +4,11 @@ import { Slider } from 'react-native';
 import { colors } from './styles';
 
 export default function Range(props) {
-  const color = colors[props.color] || props.color;
-  const minimumTrackTintColor = props.minimumTrackTintColor || color;
+  const { color: $color, style, ...passProps } = props;
+  const color = colors[$color] || $color;
 
   return (
-    <Slider
-      {...props}
-      minimumTrackTintColor={minimumTrackTintColor}
-      style={[props.style]}
-    />
+    <Slider minimumTrackTintColor={color} style={[style]} {...passProps} />
   );
 }
 

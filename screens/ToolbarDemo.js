@@ -3,7 +3,7 @@ import { Container, Toolbar, ToolbarTitle, Content } from '../src/index.js';
 
 const items = [
   { color: 'primary', titleColor: 'light' },
-  { color: 'secondary', titleColor: 'light' },
+  { color: 'secondary', titleColor: 'dark' },
   { color: 'danger', titleColor: 'light' },
   { color: 'stable', titleColor: 'dark' },
   { color: 'dark', titleColor: 'light' },

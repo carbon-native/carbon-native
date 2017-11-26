@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
-import { carbonStyles } from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   default: {
@@ -34,6 +31,7 @@ Card.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.string,
   ]),
   style: PropTypes.any,
 };

@@ -63,6 +63,7 @@ export { Toolbar };
 export { ToolbarTitle };
 export { ToolbarLeft };
 export { ToolbarRight };
+export { FloatingActionButton };
 export { Button };
 export { Card };
 export { Badge };
@@ -102,6 +103,7 @@ export default {
   ToolbarTitle,
   ToolbarLeft,
   ToolbarRight,
+  FloatingActionButton,
   Button,
   Card,
   Badge,
