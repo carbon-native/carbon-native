@@ -11,10 +11,9 @@ const styles = StyleSheet.create({
 export default function Content(props) {
   const { children, padding: $padding, scroll, style, ...passProps } = props;
 
-  let padding;
-  if ($padding === true) padding = 10;
-  else if ($padding === false) padding = 0;
-  else padding = $padding;
+  let padding = $padding;
+  if (padding === true) padding = 10;
+  if (padding === false) padding = 0;
 
   const contentStyle = [styles.default, { padding }, style];
 

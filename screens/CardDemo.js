@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 export default function CardDemo() {
   return (
     <Content style={cs.paddingLg}>
-      <Card style={cs.paddingLg}>
+      <Card padding>
         <Text>
           This is just your basic card with some text to boot. Like it? Keep
           scrolling...
@@ -35,7 +35,7 @@ export default function CardDemo() {
       </Card>
 
       <H3 style={styles.sectionHeader}>Card Headers</H3>
-      <Card style={cs.paddingLg}>
+      <Card padding>
         <H4>Header</H4>
         <Text>
           Just some text rambling on about card headers, the value they provide,

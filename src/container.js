@@ -11,13 +11,14 @@ const styles = StyleSheet.create({
 export default function Container(props) {
   const { children, padding: $padding, style, ...passProps } = props;
 
-  let padding;
-  if ($padding === true) padding = 10;
-  else if ($padding === false) padding = 0;
-  else padding = $padding;
+  let padding = $padding;
+  if (padding === true) padding = 10;
+  if (padding === false) padding = 0;
+
+  const containerStyle = [styles.default, { padding }, style];
 
   return (
-    <View style={[styles.default, { padding }, style]} {...passProps}>
+    <View style={containerStyle} {...passProps}>
       {children}
     </View>
   );

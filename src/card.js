@@ -13,16 +13,24 @@ const styles = StyleSheet.create({
 });
 
 export default function Card(props) {
+  const { children, padding: $padding, style, ...passProps } = props;
+
+  let padding = $padding;
+  if (padding === true) padding = 15;
+  if (padding === false) padding = 0;
+
+  const cardStyle = [styles.default, { padding }, style];
+
   return (
     <View
       shadowColor="rgba(0, 0, 0, 0.3)"
       shadowOffset={{ width: 0, height: 1 }}
       shadowOpacity={1}
       shadowRadius={2}
-      {...props}
-      style={[styles.default, props.style]}
+      style={cardStyle}
+      {...passProps}
     >
-      {props.children}
+      {children}
     </View>
   );
 }
@@ -33,6 +41,9 @@ Card.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  padding: PropTypes.oneOfType([PropTypes.bool, PropTypes.numer]),
   style: PropTypes.any,
 };
-Card.defaultProps = {};
+Card.defaultProps = {
+  padding: false,
+};
