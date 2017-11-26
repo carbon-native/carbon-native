@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Linking, StyleSheet, Text } from 'react-native';
-import Color from 'color';
 import { colors } from '../styles';
 
 const styles = StyleSheet.create({
@@ -10,8 +9,7 @@ const styles = StyleSheet.create({
 
 export default function A(props) {
   const { children, color: $color, href, onPress, style, ...passProps } = props;
-  const color = Color(colors[$color] || $color);
-  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+  const color = colors[$color] || $color;
   const onPressAction = href ? () => Linking.openURL(href) : onPress;
 
   return (

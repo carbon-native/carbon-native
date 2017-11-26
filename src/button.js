@@ -125,18 +125,6 @@ export default class Button extends React.Component {
         <View>{content}</View>
       </TouchableHighlight>
     );
-
-    return (
-      <TouchableHighlight
-        activeOpacity={activeOpacity}
-        onPress={onPress}
-        style={buttonStyle}
-        underlayColor={underlayColor || colorActive}
-        {...passProps}
-      >
-        <View>{content}</View>
-      </TouchableHighlight>
-    );
   }
 }
 
