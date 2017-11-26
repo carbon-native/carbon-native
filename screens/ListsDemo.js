@@ -157,7 +157,7 @@ export default function ListsDemo() {
         </Item>
 
         <Item>
-          <ItemContent>
+          <ItemContent line={false}>
             <ItemText>Taylor Swift</ItemText>
           </ItemContent>
         </Item>
