@@ -24,6 +24,15 @@ const styles = StyleSheet.create({
   },
 });
 
+const nearbyCategories = [
+  { name: 'Shopping', iconName: 'shopping-cart' },
+  { name: 'Hospital', iconName: 'ambulance' },
+  { name: 'Cafe', iconName: 'coffee' },
+  { name: 'Dog Park', iconName: 'paw' },
+  { name: 'Pub', iconName: 'beer' },
+  { name: 'Space', iconName: 'globe' },
+];
+
 export default function CardDemo() {
   return (
     <Content style={cs.paddingLg}>
@@ -47,65 +56,19 @@ export default function CardDemo() {
       <Card>
         <H4 style={[cs.paddingLg, { marginBottom: 0 }]}>Explore Nearby</H4>
         <List style={{ borderTopWidth: StyleSheet.hairlineWidth }}>
-          <Item>
-            <ItemIcon>
-              <Icon name="shopping-cart" size={24} />
-            </ItemIcon>
-            <ItemContent>
-              <ItemText>Shopping</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemIcon>
-              <Icon name="ambulance" size={24} />
-            </ItemIcon>
-            <ItemContent>
-              <ItemText>Hospital</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemIcon>
-              <Icon name="coffee" size={24} />
-            </ItemIcon>
-            <ItemContent>
-              <ItemText>Cafe</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemIcon>
-              <Icon name="paw" size={24} />
-            </ItemIcon>
-            <ItemContent>
-              <ItemText>Dog Park</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemIcon>
-              <Icon name="beer" size={24} />
-            </ItemIcon>
-            <ItemContent>
-              <ItemText>Pub</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemIcon>
-              <Icon name="globe" size={24} />
-            </ItemIcon>
-            <ItemContent style={cs.itemLast}>
-              <ItemText>Space</ItemText>
-              <Icon name="angle-right" size={24} color="#C8C7CC" />
-            </ItemContent>
-          </Item>
+          {nearbyCategories.map((category, index) => (
+            <Item key={index}>
+              <ItemIcon>
+                <Icon name={category.iconName} size={24} />
+              </ItemIcon>
+              <ItemContent
+                style={index === nearbyCategories.length - 1 && cs.itemLast}
+              >
+                <ItemText>{category.name}</ItemText>
+                <Icon name="angle-right" size={24} color="#C8C7CC" />
+              </ItemContent>
+            </Item>
+          ))}
         </List>
       </Card>
     </Content>
