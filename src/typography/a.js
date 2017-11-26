@@ -30,6 +30,7 @@ A.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  href: PropTypes.string,
   onPress: PropTypes.func,
   style: PropTypes.any,
 };
