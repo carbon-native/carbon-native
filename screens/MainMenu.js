@@ -14,7 +14,7 @@ import {
 const cs = StyleSheet.create(carbonStyles);
 
 const navigationItems = [
-  { name: 'Alerts', icon: 'exclamation-triangle' },
+  // { name: 'Alerts', icon: 'exclamation-triangle' },
   { name: 'Badge', icon: 'certificate' },
   { name: 'Buttons', icon: 'circle' },
   { name: 'Card', icon: 'clone' },
