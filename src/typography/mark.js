@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Text } from 'react-native';
 
 export default function Mark(props) {
-  const backgroundColor = props.color || '#FEF7C1';
+  const backgroundColor = props.color;
   const style = [{ backgroundColor }, props.style];
 
   return (
@@ -20,6 +20,9 @@ Mark.propTypes = {
     PropTypes.node,
     PropTypes.string,
   ]),
+  color: PropTypes.string,
   style: PropTypes.any,
 };
-Mark.defaultProps = {};
+Mark.defaultProps = {
+  color: '#FEF7C1',
+};
