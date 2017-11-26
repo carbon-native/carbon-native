@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Text } from 'react-native';
+import { colors } from '../styles';
 
 export default function Mark(props) {
-  const backgroundColor = props.color;
-  const style = [{ backgroundColor }, props.style];
+  const { children, color, style, ...passProps } = props;
+  const backgroundColor = colors[color] || color;
+  const markStyle = [{ backgroundColor }, style];
 
   return (
-    <Text {...props} style={style}>
+    <Text style={markStyle} {...passProps}>
       {' '}
-      {props.children}{' '}
+      {children}{' '}
     </Text>
   );
 }
