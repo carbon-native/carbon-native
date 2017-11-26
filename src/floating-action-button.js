@@ -52,12 +52,13 @@ export default class FloatingActionButton extends React.Component {
       underlayColor,
       ...passProps
     } = this.props;
+    const { active } = this.state;
 
     const color = Color(colors[$color] || $color);
     const colorActive =
       color.luminosity() > 0.2 ? color.darken(0.2) : color.lighten(0.5);
 
-    const currentShadow = this.state.active
+    const currentShadow = active
       ? {
           elevation: 3,
           shadowColor: '#000',
