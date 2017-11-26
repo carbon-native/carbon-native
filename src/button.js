@@ -14,24 +14,12 @@ import Color from 'color';
 
 import { colors } from './styles';
 
-const {
-  light,
-  stable,
-  primary,
-  calm,
-  secondary,
-  energized,
-  danger,
-  royal,
-  dark,
-} = colors;
-
 const sizes = {
   xs: 6,
   sm: 12,
   md: 14,
   lg: 20,
-  xl: 20,
+  xl: 28,
 };
 
 const cs = StyleSheet.create({
@@ -51,7 +39,7 @@ export default class Button extends React.Component {
     const { active } = this.state;
     const {
       activeOpacity,
-      block: $block,
+      block,
       children,
       clear,
       color: $color,
@@ -68,21 +56,21 @@ export default class Button extends React.Component {
     } = this.props;
 
     const size = sizes[$size] || $size;
-    const color = colors[$color] ? Color(colors[$color]) : Color($color);
+    const color = Color(colors[$color] || Color($color));
     const luminosity = color.luminosity();
-    const colorDark = luminosity > 0.2 ? color.darken(0.2) : color.lighten(0.5);
+    const colorActive =
+      luminosity > 0.2 ? color.darken(0.2) : color.lighten(0.5);
     const luminosTextColor = luminosity < 0.5 ? '#fff' : '#000';
 
     const backgroundColor = clear || outline ? 'transparent' : color;
     const borderColor = outline ? color : backgroundColor;
     const borderRadius = full ? 0 : round ? 50 : 2;
     const borderWidth = outline ? 1 : 0;
-    const width = full || $block ? '100%' : 'auto';
 
     let padding = { paddingHorizontal: 12, paddingVertical: 12 };
     if (size > 14) padding = { padding: 16 };
     if (size === 12) padding = { paddingHorizontal: 4, paddingVertical: 8 };
-    if (size === 6) padding = { paddingHorizontal: 10, paddingVertical: 4 };
+    if (size < 12) padding = { paddingHorizontal: 10, paddingVertical: 4 };
 
     const shadow = $shadow &&
       !clear &&
@@ -93,9 +81,12 @@ export default class Button extends React.Component {
         shadowOpacity: 0.2,
         shadowRadius: 2,
       };
+
     let textColor = luminosTextColor;
     if (clear) textColor = color;
     if (outline) textColor = active ? luminosTextColor : color;
+
+    const width = full || block ? '100%' : 'auto';
 
     const buttonStyle = [
       cs.button,
@@ -126,7 +117,7 @@ export default class Button extends React.Component {
         activeOpacity={activeOpacity}
         onPress={onPress}
         style={buttonStyle}
-        underlayColor={underlayColor || colorDark}
+        underlayColor={underlayColor || colorActive}
         onShowUnderlay={this.highlight}
         onHideUnderlay={this.unhighlight}
         {...passProps}
@@ -140,7 +131,7 @@ export default class Button extends React.Component {
         activeOpacity={activeOpacity}
         onPress={onPress}
         style={buttonStyle}
-        underlayColor={underlayColor || colorDark}
+        underlayColor={underlayColor || colorActive}
         {...passProps}
       >
         <View>{content}</View>
