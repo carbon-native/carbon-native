@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function ListsDemo() {
+export default function ListDemo() {
   return (
     <Content>
       <List>

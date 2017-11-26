@@ -8,7 +8,7 @@ import BadgeDemo from './screens/BadgeDemo';
 import ButtonsDemo from './screens/ButtonsDemo';
 import CardDemo from './screens/CardDemo';
 import IconsDemo from './screens/IconsDemo';
-import ListsDemo from './screens/ListsDemo';
+import ListDemo from './screens/ListDemo';
 import ModalDemo from './screens/ModalDemo';
 import RangeDemo from './screens/RangeDemo';
 import ToggleDemo from './screens/ToggleDemo';
@@ -34,7 +34,7 @@ const routes = {
   Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
   Card: { screen: CardDemo, navigationOptions: { title: 'Card' } },
   Icons: { screen: IconsDemo, navigationOptions: { title: 'Icons' } },
-  Lists: { screen: ListsDemo, navigationOptions: { title: 'Lists' } },
+  List: { screen: ListDemo, navigationOptions: { title: 'List' } },
   Modal: { screen: ModalDemo, navigationOptions: { title: 'Modal' } },
   Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
   Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
