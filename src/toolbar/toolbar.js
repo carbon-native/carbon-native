@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View } from 'react-native';
-import { carbonStyles } from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import { StyleSheet, Text, View } from 'react-native';
+import Color from 'color';
+import { colors } from '../styles';
 
 const styles = StyleSheet.create({
   base: {
@@ -22,23 +21,35 @@ const styles = StyleSheet.create({
 });
 
 export default function Toolbar(props) {
-  const header = props.header ? 'header' : null;
-  const footer = props.footer ? 'footer' : null;
-  const color = props.color ? props.color : null;
-  const bgColor = color ? `${color}Bg` : null;
+  const {
+    children,
+    color: $color,
+    footer,
+    header,
+    style,
+    title,
+    text,
+    textStyles,
+    ...passProps
+  } = props;
+  const color = Color(colors[$color] || $color);
+  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+  const toolbarStyle = [
+    styles.base,
+    header && styles.header,
+    footer && styles.footer,
+    { backgroundColor: color },
+    style,
+  ];
+  const content = children || (
+    <Text style={[{ color: luminosTextColor }, textStyles]}>
+      {title || text}
+    </Text>
+  );
 
   return (
-    <View
-      {...props}
-      style={[
-        styles.base,
-        header && styles[header],
-        footer && styles[footer],
-        bgColor && cs[bgColor],
-        props.style,
-      ]}
-    >
-      {props.children}
+    <View style={toolbarStyle} {...passProps}>
+      {content}
     </View>
   );
 }
@@ -47,10 +58,15 @@ Toolbar.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.string,
   ]),
   color: PropTypes.string,
   footer: PropTypes.bool,
   header: PropTypes.bool,
   style: PropTypes.any,
+  text: PropTypes.string,
+  title: PropTypes.string,
 };
-Toolbar.defaultProps = {};
+Toolbar.defaultProps = {
+  color: 'stable',
+};

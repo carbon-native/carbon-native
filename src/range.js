@@ -4,9 +4,10 @@ import { Slider } from 'react-native';
 import { colors } from './styles';
 
 export default function Toggle(props) {
-  // const color = colors[props.color];
+  const { color: $color, style, ...passProps } = props;
+  const color = colors[$color] || $color;
 
-  return <Slider {...props} style={[props.style]} />;
+  return <Slider style={[style]} {...passProps} />;
 }
 
 Toggle.propTypes = {

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import {
   Platform,
   StyleSheet,
@@ -9,9 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-
 import Color from 'color';
-
 import { colors } from './styles';
 
 const sizes = {
@@ -22,7 +19,7 @@ const sizes = {
   xl: 28,
 };
 
-const cs = StyleSheet.create({
+const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -51,6 +48,7 @@ export default class Button extends React.Component {
       size: $size,
       style,
       text,
+      textStyles,
       underlayColor,
       ...passProps
     } = this.props;
@@ -89,7 +87,7 @@ export default class Button extends React.Component {
     const width = full || block ? '100%' : 'auto';
 
     const buttonStyle = [
-      cs.button,
+      styles.button,
       { backgroundColor },
       { borderColor },
       { borderRadius },
@@ -102,7 +100,9 @@ export default class Button extends React.Component {
 
     const textStyle = { color: textColor, fontSize: size };
 
-    const content = children || <Text style={textStyle}>{text}</Text>;
+    const content = children || (
+      <Text style={[textStyle, textStyles]}>{text}</Text>
+    );
 
     if (clear) {
       return (
@@ -143,7 +143,11 @@ export default class Button extends React.Component {
 Button.propTypes = {
   activeOpacity: PropTypes.number,
   block: PropTypes.bool,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   clear: PropTypes.bool,
   color: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   onPress: PropTypes.func,

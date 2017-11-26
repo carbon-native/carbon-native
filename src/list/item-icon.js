@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View } from 'react-native';
-import { carbonStyles } from '../styles';
-
-const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   default: {
@@ -16,9 +13,11 @@ const styles = StyleSheet.create({
 });
 
 export default function ItemIcon(props) {
+  const { children, style, ...passProps } = props;
+
   return (
-    <View {...props} style={[styles.default, props.style]}>
-      {props.children}
+    <View style={[styles.default, style]} {...props}>
+      {children}
     </View>
   );
 }
@@ -27,6 +26,7 @@ ItemIcon.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.string,
   ]),
   style: PropTypes.any,
 };

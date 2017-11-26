@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, View } from 'react-native';
-import { carbonStyles } from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import Color from 'color';
+import { colors } from './styles';
 
 const styles = StyleSheet.create({
   base: {
@@ -20,20 +19,31 @@ const styles = StyleSheet.create({
 });
 
 export default function Badge(props) {
-  const color = props.color;
-  const bgColor = `${color}Bg`;
-  const textColor = color !== 'light' && color !== 'stable' ? 'light' : null;
+  const { children, color: $color, style, textStyles, ...passProps } = props;
+  const color = Color(colors[$color] || $color);
+  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+  const content = children || (
+    <Text style={[styles.text, { color: luminosTextColor }, textStyles]}>
+      {props.text}
+    </Text>
+  );
 
   return (
-    <View {...props} style={[styles.base, bgColor && cs[bgColor], props.style]}>
-      <Text style={[styles.text, textColor && cs[textColor]]}>
-        {props.text}
-      </Text>
+    <View
+      style={[styles.base, { backgroundColor: color }, style]}
+      {...passProps}
+    >
+      {content}
     </View>
   );
 }
 
 Badge.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   color: PropTypes.string,
   style: PropTypes.any,
   text: PropTypes.string,

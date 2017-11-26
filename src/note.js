@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, Text } from 'react-native';
-import { carbonStyles } from './styles';
-
-const cs = StyleSheet.create(carbonStyles);
+import { colors } from './styles';
 
 const styles = StyleSheet.create({
   default: {
     fontSize: 14,
-    color: '#AEACB4',
   },
 });
 
 export default function Note(props) {
+  const { children, color: $color, style, ...passProps } = props;
+  const color = colors[$color] || $color;
+
   return (
-    <Text {...props} style={[styles.default, props.style]}>
-      {props.children}
+    <Text style={[styles.default, { color }, style]} {...passProps}>
+      {children}
     </Text>
   );
 }
@@ -24,7 +24,11 @@ Note.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
+    PropTypes.string,
   ]),
+  color: PropTypes.string,
   style: PropTypes.any,
 };
-Note.defaultProps = {};
+Note.defaultProps = {
+  color: '#AEACB4',
+};
