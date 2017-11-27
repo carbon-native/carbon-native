@@ -11,170 +11,61 @@ import {
   Toggle,
 } from '../src/index.js';
 
-const cs = StyleSheet.create(carbonStyles);
+const characters = [
+  { name: 'Jon Snow', color: 'primary', value: true },
+  { name: 'Daenerys Targaryen', color: 'energized', value: false },
+  { name: 'Arya Stark', color: 'danger', value: true },
+  { name: 'Tyrion Lannister', color: 'royal', value: true },
+  { name: 'Sansa Stark', color: 'danger', value: false },
+  { name: 'Khal Drogo', color: 'dark', value: true },
+  { name: 'Cersei Lannister', color: 'energized', value: true },
+  { name: 'Stannis Baratheon', color: 'royal', value: false },
+  { name: 'Petyr Baelish', color: 'secondary', value: true },
+  { name: 'Hodor', color: 'royal', value: false },
+  { name: 'Catelyn Stark', color: 'dark', value: true },
+  { name: 'Bronn', color: 'energized', value: false },
+];
 
-export default class ToggleDemo extends React.Component {
+class ToggleExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      frodo: true,
-      sam: false,
-      eowyn: true,
-      legolas: true,
-      gimli: false,
-      saruman: true,
-      gandalf: true,
-      arwen: false,
-      treebeard: true,
-      boromir: false,
-      gollum: true,
-      galadriel: false,
+      value: props.value || false,
     };
   }
 
   render() {
     return (
-      <Content>
-        <List>
-          <Item style={cs.itemHeader}>
-            <ItemContent line={false}>
-              <ItemHeaderText>CHARACTERS</ItemHeaderText>
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Frodo Baggins</ItemText>
-              <Toggle
-                color="primary"
-                onValueChange={value => this.setState({ frodo: value })}
-                value={this.state.frodo}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Sam</ItemText>
-              <Toggle
-                color="energized"
-                onValueChange={value => this.setState({ sam: value })}
-                value={this.state.sam}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Eowyn</ItemText>
-              <Toggle
-                color="danger"
-                onValueChange={value => this.setState({ eowyn: value })}
-                value={this.state.eowyn}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Legolas</ItemText>
-              <Toggle
-                color="royal"
-                onValueChange={value => this.setState({ legolas: value })}
-                value={this.state.legolas}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Gimli</ItemText>
-              <Toggle
-                color="danger"
-                onValueChange={value => this.setState({ gimli: value })}
-                value={this.state.gimli}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Saruman</ItemText>
-              <Toggle
-                color="dark"
-                onValueChange={value => this.setState({ saruman: value })}
-                value={this.state.saruman}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Gandalf</ItemText>
-              <Toggle
-                color="energized"
-                onValueChange={value => this.setState({ gandalf: value })}
-                value={this.state.gandalf}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Arwen</ItemText>
-              <Toggle
-                color="royal"
-                onValueChange={value => this.setState({ arwen: value })}
-                value={this.state.arwen}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Treebeard</ItemText>
-              <Toggle
-                color="secondary"
-                onValueChange={value => this.setState({ treebeard: value })}
-                value={this.state.treebeard}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Boromir</ItemText>
-              <Toggle
-                color="royal"
-                onValueChange={value => this.setState({ boromir: value })}
-                value={this.state.boromir}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent>
-              <ItemText>Gollum</ItemText>
-              <Toggle
-                color="dark"
-                onValueChange={value => this.setState({ gollum: value })}
-                value={this.state.gollum}
-              />
-            </ItemContent>
-          </Item>
-
-          <Item>
-            <ItemContent style={cs.itemLast}>
-              <ItemText>Galadriel</ItemText>
-              <Toggle
-                color="energized"
-                onValueChange={value => this.setState({ galadriel: value })}
-                value={this.state.galadriel}
-              />
-            </ItemContent>
-          </Item>
-        </List>
-      </Content>
+      <Toggle
+        {...this.props}
+        value={this.state.value}
+        onValueChange={value => this.setState({ value })}
+      />
     );
   }
+}
+
+const cs = StyleSheet.create(carbonStyles);
+
+export default function ToggleDemo() {
+  return (
+    <Content>
+      <List>
+        <Item style={cs.itemHeader}>
+          <ItemContent line={false}>
+            <ItemHeaderText>CHARACTERS</ItemHeaderText>
+          </ItemContent>
+        </Item>
+
+        {characters.map((character, index) => (
+          <Item key={index}>
+            <ItemContent style={index === characters.length - 1 && cs.itemLast}>
+              <ItemText>{character.name}</ItemText>
+              <ToggleExample color={character.color} value={character.value} />
+            </ItemContent>
+          </Item>
+        ))}
+      </List>
+    </Content>
+  );
 }
