@@ -29,7 +29,7 @@ export class RangeExample extends React.Component {
 export default function RangeDemo() {
   return (
     <Content padding>
-      <View style={[cs.row, cs.padding, { alignItems: 'center' }]}>
+      <View style={[cs.row, cs.paddingHorizontal, { alignItems: 'center' }]}>
         <Icon name="volume-down" size={24} />
         <RangeExample />
         <Icon name="volume-up" size={24} />
