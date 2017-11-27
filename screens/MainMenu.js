@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Platform, StatusBar } from 'react-native';
 import Icon from '@expo/vector-icons/FontAwesome';
 import {
   carbonStyles,
@@ -32,6 +32,7 @@ export default function MainMenu(props) {
 
   return (
     <Content>
+      {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
       <List>
         {navigationItems.map((item, index) => (
           <Item key={index} onPress={() => navigate(item.name)}>
