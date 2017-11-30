@@ -19,10 +19,12 @@
     "package-json": "node ./scripts/package-json.js",
     "copy-static-files": "node ./scripts/copy-static-files.js",
     "build":
-      "yarn clean && babel ./src --out-dir dist && yarn package-json && yarn copy-static-files",
-    "build-watch": "yarn build && babel ./src --watch --out-dir ./dist",
+      "yarn clean && babel ./src --out-dir dist --copy-files && yarn package-json && yarn copy-static-files",
+    "build-watch":
+      "yarn build && babel ./src --watch --out-dir ./dist --copy-files",
     "precommit": "lint-staged",
     "test": "jest",
+    "test-dist": "TEST_DIST=true yarn test",
     "start-dist": "NODE_ENV=production && react-native-scripts start",
     "start": "react-native-scripts start",
     "eject": "react-native-scripts eject",
