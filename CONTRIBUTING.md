@@ -29,9 +29,6 @@ publish on NPM:
 * Tyler Buchea
 * Josh Buchea
 
-After publishing you have to manually update the root `package.json` file to
-match the new version in `./dist/package.json`, commit, and push the change.
-
 To deploy the Kitchen Sink app to Expo you will need the Expo CLI tool `npm
 install -g exp` after that you can run `exp publish`. Only specified
 organizations admins should have access to publish on Expo:

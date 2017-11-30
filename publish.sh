@@ -1,6 +1,8 @@
 #!/bin/bash
-yarn test
-cd dist
+set -e
+
+yarn build
+yarn test-dist
 
 echo "patch, minor, or major release? "
 read release_type
@@ -15,11 +17,13 @@ if [ "$release_type" == "major" ] ; then
     version=$(npm version major)
 fi
 
+yarn package-json
+
 echo "Are you sure you want to publish $version (yes\no)? "
 read yesno
 
 if [ "$yesno" == "yes" ] ; then
-    git tag -a $version -m "$version"
     git push --follow-tags
+    cd dist
     npm publish
 fi
