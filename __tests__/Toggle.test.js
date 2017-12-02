@@ -1,6 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Toggle as TestComponent } from '../src';
+const { Toggle: TestComponent } = process.env.TEST_DIST
+  ? require('../dist')
+  : require('../src');
 
 test('renders correctly', () => {
   const rendered = renderer.create(<TestComponent />).toJSON();
