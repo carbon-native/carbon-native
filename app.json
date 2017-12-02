@@ -7,7 +7,9 @@
     "sdkVersion": "22.0.0",
     "privacy": "public",
     "ios": {
-      "bundleIdentifier": "com.getcarbonnative.kitchensink"
+      "bundleIdentifier": "com.getcarbonnative.kitchensink",
+      "buildNumber": "2",
+      "supportsTablet": true
     },
     "android": {
       "package": "com.getcarbonnative.kitchensink"
