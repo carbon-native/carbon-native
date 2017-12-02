@@ -61,6 +61,5 @@ yarn test-dist
 ## Deploy
 
 ```bash
-npm run build
 ./publish.sh
 ```
