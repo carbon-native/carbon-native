@@ -1,6 +1,6 @@
 {
   "name": "carbon-native",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A set of UI components for building React Native apps.",
   "private": true,
   "author": "",
@@ -18,10 +18,8 @@
     "clean": "rimraf dist",
     "package-json": "node ./scripts/package-json.js",
     "copy-static-files": "node ./scripts/copy-static-files.js",
-    "build":
-      "yarn clean && babel ./src --out-dir dist --copy-files && yarn package-json && yarn copy-static-files",
-    "build-watch":
-      "yarn build && babel ./src --watch --out-dir ./dist --copy-files",
+    "build": "yarn clean && babel ./src --out-dir dist --copy-files && yarn package-json && yarn copy-static-files",
+    "build-watch": "yarn build && babel ./src --watch --out-dir ./dist --copy-files",
     "precommit": "lint-staged",
     "test": "jest",
     "test-dist": "TEST_DIST=true yarn test",
@@ -49,7 +47,10 @@
   "bugs": {
     "url": "https://github.com/carbon-native/carbon-native/issues"
   },
-  "keywords": ["react-native", "ui"],
+  "keywords": [
+    "react-native",
+    "ui"
+  ],
   "peerDepenecies": {
     "react": ">=16.0.0-beta.5",
     "react-native": ">=0.49.5",
