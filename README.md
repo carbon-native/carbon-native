@@ -113,7 +113,7 @@ import {
 
 ### Icons
 
-<img src="https://raw.githubusercontent.com/carbon-native/kitchen-sink/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
+<img src="https://raw.githubusercontent.com/carbon-native/carbon-native/master/screenshots/icons.png" width="375" height="auto" alt="Icons">
 
 ```sh
 npm install react-native-vector-icons --save
