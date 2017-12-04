@@ -2,7 +2,7 @@
 
 **A set of UI components for building React Native apps**
 
-[![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native) [![npm version](https://img.shields.io/npm/v/carbon-native.svg)](https://www.npmjs.com/package/carbon-native) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License](https://img.shields.io/github/license/carbon-native/carbon-native.svg)](LICENSE)
+[![CircleCI](https://circleci.com/gh/carbon-native/carbon-native.svg?style=svg)](https://circleci.com/gh/carbon-native/carbon-native) [![npm version](https://img.shields.io/npm/v/carbon-native.svg)](https://www.npmjs.com/package/carbon-native) [![License](https://img.shields.io/github/license/carbon-native/carbon-native.svg)](LICENSE) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ## Demo App
 
