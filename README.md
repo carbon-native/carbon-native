@@ -7,7 +7,6 @@
 ## Demo App
 
 - [Expo](https://expo.io/@tylerbuchea/carbon-native-kitchen-sink)
-- [Apple App Store](https://itunes.apple.com/us/app/carbon-native-kitchen-sink/id1137214677)
 - [Google Play Store](https://play.google.com/store/apps/details?id=com.getcarbonnative.kitchensink)
 
 ## Get Started
