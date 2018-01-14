@@ -2,7 +2,7 @@
 
 **A set of UI components for building React Native apps**
 
-[![CircleCI](https://img.shields.io/circleci/project/github/carbon-native/carbon-native.svg)](https://circleci.com/gh/carbon-native/carbon-native) [![npm version](https://img.shields.io/npm/v/carbon-native.svg)](https://www.npmjs.com/package/carbon-native) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License](https://img.shields.io/github/license/carbon-native/carbon-native.svg)](LICENSE)
+[![CircleCI](https://img.shields.io/circleci/project/github/carbon-native/carbon-native.svg)](https://circleci.com/gh/carbon-native/carbon-native) [![npm version](https://img.shields.io/npm/v/carbon-native.svg)](https://www.npmjs.com/package/carbon-native) [![code style: prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md) [![License](https://img.shields.io/github/license/carbon-native/carbon-native.svg)](LICENSE)
 
 ## Demo App
 
