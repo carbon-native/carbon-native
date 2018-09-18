@@ -28,7 +28,7 @@
     "eject": "expo eject",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "test-expo": "node node_modules/jest/bin/jest.js --watch"
+    "test-expo": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
     "preset": "jest-expo"
