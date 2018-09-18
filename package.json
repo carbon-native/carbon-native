@@ -73,7 +73,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "color": "^2.0.1",
+    "color": "^3.0.0",
     "expo": "^30.0.1",
     "react": "16.5.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz"
