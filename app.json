@@ -4,7 +4,7 @@
     "icon": "./app-icon.png",
     "version": "2.0.0",
     "slug": "carbon-native-kitchen-sink",
-    "sdkVersion": "30.0.0",
+    "sdkVersion": "26.0.0",
     "privacy": "public",
     "ios": {
       "bundleIdentifier": "com.getcarbonnative.kitchensink",
