@@ -31,7 +31,8 @@
     "test-expo": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "setupTestFrameworkScriptFile": "./setupJest"
   },
   "lint-staged": {
     "src/*.js": [
