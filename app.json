@@ -2,10 +2,11 @@
   "expo": {
     "name": "Carbon Native Kitchen Sink",
     "icon": "./app-icon.png",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "slug": "carbon-native-kitchen-sink",
-    "sdkVersion": "26.0.0",
+    "sdkVersion": "36.0.0",
     "privacy": "public",
+    "orientation": "portrait",
     "ios": {
       "bundleIdentifier": "com.getcarbonnative.kitchensink",
       "buildNumber": "2",

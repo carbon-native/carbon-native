@@ -1,6 +1,8 @@
 import React from 'react';
 import { Platform, StatusBar } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import MainMenu from './screens/MainMenu';
 import AlertsDemo from './screens/AlertsDemo';
@@ -20,33 +22,25 @@ const navigatorConfig = {
     paddingTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
   },
 };
+const Stack = createStackNavigator();
 
-const routes = {
-  MainMenu: {
-    screen: MainMenu,
-    navigationOptions: { title: 'Kitchen Sink' },
-  },
-  Alerts: {
-    screen: AlertsDemo,
-    navigationOptions: { title: 'Alerts' },
-  },
-  Badge: { screen: BadgeDemo, navigationOptions: { title: 'Badge' } },
-  Buttons: { screen: ButtonsDemo, navigationOptions: { title: 'Buttons' } },
-  Card: { screen: CardDemo, navigationOptions: { title: 'Card' } },
-  Icons: { screen: IconsDemo, navigationOptions: { title: 'Icons' } },
-  List: { screen: ListDemo, navigationOptions: { title: 'List' } },
-  Modal: { screen: ModalDemo, navigationOptions: { title: 'Modal' } },
-  Range: { screen: RangeDemo, navigationOptions: { title: 'Range' } },
-  Toggle: { screen: ToggleDemo, navigationOptions: { title: 'Toggle' } },
-  Toolbar: {
-    screen: ToolbarDemo,
-    navigationOptions: { title: 'Toolbar' },
-  },
-  Typography: {
-    screen: TypographyDemo,
-    navigationOptions: { title: 'Typography' },
-  },
-};
-
-const App = StackNavigator(routes, navigatorConfig);
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="MainMenu" component={MainMenu} options={{ title: "Kitchen Sink" }} />
+        <Stack.Screen name="Badge" component={BadgeDemo} options={{ title: "Badge" }} />
+        <Stack.Screen name="Alerts" component={AlertsDemo} options={{ title: "Alerts" }} />
+        <Stack.Screen name="Buttons" component={ButtonsDemo} options={{ title: "Buttons" }} />
+        <Stack.Screen name="Card" component={CardDemo} options={{ title: "Card" }} />
+        <Stack.Screen name="Icons" component={IconsDemo} options={{ title: "Icons" }} />
+        <Stack.Screen name="List" component={ListDemo} options={{ title: "List" }} />
+        <Stack.Screen name="Modal" component={ModalDemo} options={{ title: "Modal" }} />
+        <Stack.Screen name="Range" component={RangeDemo} options={{ title: "Range" }} />
+        <Stack.Screen name="Toggle" component={ToggleDemo} options={{ title: "Toggle" }} />
+        <Stack.Screen name="Toolbar" component={ToolbarDemo} options={{ title: "Toolbar" }} />
+        <Stack.Screen name="Typography" component={TypographyDemo} options={{ title: "Typography" }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}

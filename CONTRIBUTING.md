@@ -39,13 +39,13 @@ organizations admins should have access to publish on Expo:
 ## Setup
 
 ```bash
-./setup.sh
+./ops setup
 ```
 
 ## Develop
 
 ```bash
-./start.sh
+./ops start
 ```
 
 ## Test
@@ -61,5 +61,5 @@ yarn test-dist
 ## Deploy
 
 ```bash
-./publish.sh
+./ops ship
 ```

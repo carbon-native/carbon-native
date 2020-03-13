@@ -6,10 +6,8 @@ const { to } = require('await-to-js');
   const [error1, data] = await to(fs.readJson('./package.json'));
   if (error1) return console.error(error1);
 
-  data.dependencies = _.omit(data.dependencies, [
-    'expo',
-    'react',
-    'react-native',
+  data.dependencies = _.pick(data.dependencies, [
+    'color',
   ]);
 
   data.private = false;

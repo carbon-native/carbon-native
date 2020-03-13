@@ -8,9 +8,11 @@ import {
   ToolbarLeft,
   ToolbarRight,
   P,
+  H1,
   Button,
   colors,
 } from '../src/index.js';
+import { View } from "react-native";
 import Icon from '@expo/vector-icons/Feather';
 
 const items = [
@@ -24,41 +26,43 @@ const items = [
 export default function ToolbarDemo() {
   return (
     <Container>
-      <Toolbar color="stable">
+      <Toolbar color="primary">
         <ToolbarLeft />
 
-        <ToolbarTitle color="dark">Secondary Toolbar</ToolbarTitle>
+        <ToolbarTitle color="light">Secondary Toolbar</ToolbarTitle>
 
         <ToolbarRight>
           <Button clear size="xs" onPress={() => alert('Settings')}>
-            <Icon name="settings" size={24} style={{ color: colors.primary }} />
+            <Icon name="settings" size={20} style={{ color: colors.light }} />
           </Button>
         </ToolbarRight>
       </Toolbar>
 
       <Content padding>
-        <P>Some content</P>
+        <H1>Hello there!</H1>
+        <P>I'm pleased to introduce you to this example content.</P>
       </Content>
 
-      <Toolbar color="stable">
+      <Toolbar color="primary">
         <ToolbarLeft>
           <Button clear size="xs" onPress={() => alert('Undo')}>
             <Icon
               name="rotate-ccw"
-              size={24}
-              style={{ color: colors.primary }}
+              size={20}
+              style={{ color: colors.light }}
             />
           </Button>
         </ToolbarLeft>
 
-        <ToolbarTitle color="dark">Footer Toolbar</ToolbarTitle>
+        <ToolbarTitle color="light">Footer Toolbar</ToolbarTitle>
 
         <ToolbarRight>
           <Button clear size="xs" onPress={() => alert('Create new document')}>
-            <Icon name="edit" size={24} style={{ color: colors.primary }} />
+            <Icon name="edit" size={20} style={{ color: colors.light }} />
           </Button>
         </ToolbarRight>
       </Toolbar>
+      <View style={{ backgroundColor: colors.primary, width: "100%", height: 20 }} />
     </Container>
   );
 }

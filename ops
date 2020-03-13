@@ -1,0 +1,70 @@
+#!/bin/bash
+set -e
+
+# These commands take this form
+# ./ops [script] [option]
+
+script=${1}
+option=${2}
+
+if [ -z $script ] ; then
+  echo "please enter a command after ./ops"
+
+elif [ $script == "clean" ] ; then
+  watchman watch-del-all
+  rm -rf node_modules
+  yarn install
+  rm -rf /tmp/metro-*
+  yarn start --reset-cache
+
+elif [ $script == "setup" ] ; then
+  # yarn cache clean
+  rm package-lock.json
+  rm -rf node_modules
+  yarn install
+
+
+elif [ $script == "start" ] ; then
+  if [ "$option" == "production" ] ; then
+      echo 'starting production environment serving dist folder'
+      yarn start-dist --reset-cache
+  else
+      echo 'starting development environment serving src folder'
+      yarn start --reset-cache & yarn test --watch
+  fi
+
+elif [ $script == "test" ] ; then
+  yarn test
+
+elif [ $script == "build" ] ; then
+  yarn build
+
+elif [ $script == "ship" ] ; then
+  yarn build
+  yarn test-dist
+
+  echo "patch, minor, or major release? "
+  read release_type
+
+  if [ "$release_type" == "patch" ] ; then
+      version=$(npm version patch)
+  fi
+  if [ "$release_type" == "minor" ] ; then
+      version=$(npm version minor)
+  fi
+  if [ "$release_type" == "major" ] ; then
+      version=$(npm version major)
+  fi
+
+  yarn package-json
+
+  echo "Are you sure you want to publish $version (yes\no)? "
+  read yesno
+
+  if [ "$yesno" == "yes" ] ; then
+      git push --follow-tags
+      cd dist
+      npm publish
+  fi
+
+fi

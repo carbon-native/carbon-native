@@ -11,8 +11,7 @@ export default function Toggle(props) {
 
   return (
     <Switch
-      tintColor={tintColor}
-      onTintColor={color}
+      trackColor={{ true: color, false: tintColor }}
       style={[style]}
       {...passProps}
     />
@@ -25,6 +24,6 @@ Toggle.propTypes = {
   style: PropTypes.any,
 };
 Toggle.defaultProps = {
-  color: 'stable',
-  tintColor: '#E5E5E5',
+  color: null,
+  tintColor: null,
 };
