@@ -143,7 +143,7 @@ Button.propTypes = {
   round: PropTypes.bool,
   shadow: PropTypes.bool,
   size: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  style: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
+  style: PropTypes.any,
   text: PropTypes.string,
   underlayColor: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
