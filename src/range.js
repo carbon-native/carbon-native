@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Slider } from 'react-native';
+import Slider from '@react-native-community/slider';
 import { colors } from './styles';
 
 export default function Range(props) {

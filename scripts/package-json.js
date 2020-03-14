@@ -8,6 +8,7 @@ const { to } = require('await-to-js');
 
   data.dependencies = _.pick(data.dependencies, [
     'color',
+    '@react-native-community/slider',
   ]);
 
   data.private = false;

@@ -31,7 +31,10 @@
     "test-expo": "node ./node_modules/jest/bin/jest.js --watchAll"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "jest-expo",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist"
+    ]
   },
   "lint-staged": {
     "src/*.js": [
@@ -72,7 +75,9 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@babel/cli": "^7.8.4",
     "@react-native-community/masked-view": "0.1.5",
+    "@react-native-community/slider": "^2.0.8",
     "@react-navigation/native": "^5.0.9",
     "@react-navigation/stack": "^5.1.1",
     "color": "^3.1.2",
