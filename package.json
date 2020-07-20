@@ -67,7 +67,7 @@
     "husky": "^4.2.3",
     "jest-expo": "^36.0.1",
     "lint-staged": "^10.0.8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react-test-renderer": "16.13.0",
