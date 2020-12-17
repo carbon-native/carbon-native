@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import React from "react";
+import { StyleSheet, Text } from "react-native";
 import {
   carbonStyles,
   H3,
@@ -11,15 +11,15 @@ import {
   ItemHeaderText,
   ItemIcon,
   Note,
-} from '../src/index.js';
-import Icon from '@expo/vector-icons/FontAwesome';
+} from "../src/index.js";
+import Icon from "@expo/vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
 

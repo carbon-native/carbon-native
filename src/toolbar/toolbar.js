@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StyleSheet, Text, View } from 'react-native';
-import Color from 'color';
-import { colors } from '../styles';
+import React from "react";
+import PropTypes from "prop-types";
+import { StyleSheet, Text, View } from "react-native";
+import Color from "color";
+import { colors } from "../styles";
 
 const styles = StyleSheet.create({
   base: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
     height: 44,
   },
   header: {
@@ -33,12 +33,12 @@ export default function Toolbar(props) {
     ...passProps
   } = props;
   const color = Color(colors[$color] || $color);
-  const luminosTextColor = color.luminosity() < 0.5 ? '#fff' : '#000';
+  const luminosTextColor = color.luminosity() < 0.5 ? "#fff" : "#000";
   const toolbarStyle = [
     styles.base,
     header && styles.header,
     footer && styles.footer,
-    { backgroundColor: color },
+    { backgroundColor: color.hex() },
     style,
   ];
   const content = children || (
@@ -68,5 +68,5 @@ Toolbar.propTypes = {
   title: PropTypes.string,
 };
 Toolbar.defaultProps = {
-  color: 'stable',
+  color: "stable",
 };

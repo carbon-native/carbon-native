@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from "react";
+import { StyleSheet, View, Text } from "react-native";
 import {
   carbonStyles,
   H3,
@@ -8,8 +8,8 @@ import {
   Button,
   BR,
   FloatingActionButton,
-} from '../src/index.js';
-import Icon from '@expo/vector-icons/FontAwesome';
+} from "../src/index.js";
+import Icon from "@expo/vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
 
@@ -25,9 +25,9 @@ export default function ButtonsDemo() {
   return (
     <Container>
       <FloatingActionButton
-        onPress={() => alert('I am a Floating Action Button!')}
+        onPress={() => alert("I am a Floating Action Button!")}
       >
-        <Icon name="star" size={22} style={{ color: 'white' }} />
+        <Icon name="star" size={22} style={{ color: "white" }} />
       </FloatingActionButton>
       <Content>
         <View style={cs.padding}>
@@ -265,35 +265,35 @@ export default function ButtonsDemo() {
         <View style={cs.padding}>
           <View style={[cs.row, cs.marginBottom]}>
             <Button color="stable" onPress={() => {}}>
-              <Text style={{ color: 'black' }}>
+              <Text style={{ color: "black" }}>
                 <Icon name="space-shuttle" size={22} /> Stable
               </Text>
             </Button>
           </View>
           <View style={[cs.row, cs.marginBottom]}>
             <Button color="primary" onPress={() => {}}>
-              <Text style={{ color: 'white' }}>
+              <Text style={{ color: "white" }}>
                 <Icon name="home" size={22} /> Primary
               </Text>
             </Button>
           </View>
           <View style={[cs.row, cs.marginBottom]}>
             <Button color="secondary" onPress={() => {}}>
-              <Text style={{ color: 'black' }}>
+              <Text style={{ color: "black" }}>
                 <Icon name="users" size={22} /> Secondary
               </Text>
             </Button>
           </View>
           <View style={[cs.row, cs.marginBottom]}>
             <Button color="danger" onPress={() => {}}>
-              <Text style={{ color: 'white' }}>
+              <Text style={{ color: "white" }}>
                 <Icon name="pencil" size={22} /> Danger
               </Text>
             </Button>
           </View>
           <View style={[cs.row, cs.marginBottom]}>
             <Button color="dark" onPress={() => {}}>
-              <Text style={{ color: 'white' }}>
+              <Text style={{ color: "white" }}>
                 <Icon name="trash" size={22} /> Dark
               </Text>
             </Button>

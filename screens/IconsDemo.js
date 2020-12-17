@@ -1,15 +1,15 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { carbonStyles, Content } from '../src/index.js';
-import Icon from '@expo/vector-icons/FontAwesome';
+import React from "react";
+import { StyleSheet, View } from "react-native";
+import { carbonStyles, Content } from "../src/index.js";
+import Icon from "@expo/vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 
 const styles = StyleSheet.create({
   row: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-around",
     marginVertical: 10,
   },
 });

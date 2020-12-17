@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import {
   Platform,
   StyleSheet,
@@ -7,9 +7,9 @@ import {
   TouchableHighlight,
   TouchableOpacity,
   View,
-} from 'react-native';
-import Color from 'color';
-import { colors } from './styles';
+} from "react-native";
+import Color from "color";
+import { colors } from "./styles";
 
 const sizes = {
   xs: 6,
@@ -21,9 +21,9 @@ const sizes = {
 
 const styles = StyleSheet.create({
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "row",
   },
 });
 
@@ -57,11 +57,11 @@ export default class Button extends React.Component {
     const color = Color(colors[$color] || Color($color));
     const luminosity = color.luminosity();
     const colorActive =
-      luminosity > 0.2 ? color.darken(0.2) : color.lighten(0.5);
-    const luminosTextColor = luminosity < 0.5 ? '#fff' : '#000';
+      luminosity > 0.2 ? color.darken(0.2).hex() : color.lighten(0.5).hex();
+    const luminosTextColor = luminosity < 0.5 ? "#fff" : "#000";
 
-    const backgroundColor = clear || outline ? 'transparent' : color;
-    const borderColor = outline ? color : backgroundColor;
+    const backgroundColor = clear || outline ? "transparent" : color.hex();
+    const borderColor = outline ? color.hex() : backgroundColor;
     const borderRadius = full ? 0 : round ? 50 : 2;
     const borderWidth = outline ? 1 : 0;
 
@@ -74,17 +74,17 @@ export default class Button extends React.Component {
       !clear &&
       !outline && {
         elevation: 2,
-        shadowColor: '#000',
+        shadowColor: "#000",
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
       };
 
     let textColor = luminosTextColor;
-    if (clear) textColor = color;
-    if (outline) textColor = active ? luminosTextColor : color;
+    if (clear) textColor = color.hex();
+    if (outline) textColor = active ? luminosTextColor : color.hex();
 
-    const width = full || block ? '100%' : 'auto';
+    const width = full || block ? "100%" : "auto";
 
     const buttonStyle = [
       styles.button,
@@ -154,12 +154,12 @@ Button.defaultProps = {
   children: null,
   clear: false,
   color: colors.stable,
-  onPress: () => alert('Attach an onPress prop'),
+  onPress: () => alert("Attach an onPress prop"),
   outline: false,
   round: false,
   shadow: true,
   size: sizes.md,
   style: null,
-  text: 'Press Me',
+  text: "Press Me",
   underlayColor: null,
 };

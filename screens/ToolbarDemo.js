@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text } from 'react-native';
+import React from "react";
+import { Text } from "react-native";
 import {
   Container,
   Content,
@@ -11,16 +11,16 @@ import {
   H1,
   Button,
   colors,
-} from '../src/index.js';
+} from "../src/index.js";
 import { View } from "react-native";
-import Icon from '@expo/vector-icons/Feather';
+import Icon from "@expo/vector-icons/Feather";
 
 const items = [
-  { color: 'primary', titleColor: 'light' },
-  { color: 'secondary', titleColor: 'light' },
-  { color: 'danger', titleColor: 'light' },
-  { color: 'stable', titleColor: 'dark' },
-  { color: 'dark', titleColor: 'light' },
+  { color: "primary", titleColor: "light" },
+  { color: "secondary", titleColor: "light" },
+  { color: "danger", titleColor: "light" },
+  { color: "stable", titleColor: "dark" },
+  { color: "dark", titleColor: "light" },
 ];
 
 export default function ToolbarDemo() {
@@ -32,7 +32,7 @@ export default function ToolbarDemo() {
         <ToolbarTitle color="light">Secondary Toolbar</ToolbarTitle>
 
         <ToolbarRight>
-          <Button clear size="xs" onPress={() => alert('Settings')}>
+          <Button clear size="xs" onPress={() => alert("Settings")}>
             <Icon name="settings" size={20} style={{ color: colors.light }} />
           </Button>
         </ToolbarRight>
@@ -45,24 +45,22 @@ export default function ToolbarDemo() {
 
       <Toolbar color="primary">
         <ToolbarLeft>
-          <Button clear size="xs" onPress={() => alert('Undo')}>
-            <Icon
-              name="rotate-ccw"
-              size={20}
-              style={{ color: colors.light }}
-            />
+          <Button clear size="xs" onPress={() => alert("Undo")}>
+            <Icon name="rotate-ccw" size={20} style={{ color: colors.light }} />
           </Button>
         </ToolbarLeft>
 
         <ToolbarTitle color="light">Footer Toolbar</ToolbarTitle>
 
         <ToolbarRight>
-          <Button clear size="xs" onPress={() => alert('Create new document')}>
+          <Button clear size="xs" onPress={() => alert("Create new document")}>
             <Icon name="edit" size={20} style={{ color: colors.light }} />
           </Button>
         </ToolbarRight>
       </Toolbar>
-      <View style={{ backgroundColor: colors.primary, width: "100%", height: 20 }} />
+      <View
+        style={{ backgroundColor: colors.primary, width: "100%", height: 20 }}
+      />
     </Container>
   );
 }

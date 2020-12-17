@@ -1,5 +1,5 @@
-import React from 'react';
-import { StyleSheet, Text } from 'react-native';
+import React from "react";
+import { StyleSheet, Text } from "react-native";
 import {
   carbonStyles,
   H3,
@@ -11,8 +11,8 @@ import {
   ItemContent,
   ItemText,
   ItemIcon,
-} from '../src/index.js';
-import Icon from '@expo/vector-icons/FontAwesome';
+} from "../src/index.js";
+import Icon from "@expo/vector-icons/FontAwesome";
 
 const cs = StyleSheet.create(carbonStyles);
 
@@ -20,17 +20,17 @@ const styles = StyleSheet.create({
   sectionHeader: {
     marginTop: 30,
     marginBottom: 30,
-    textAlign: 'center',
+    textAlign: "center",
   },
 });
 
 const nearbyCategories = [
-  { name: 'Shopping', iconName: 'shopping-cart' },
-  { name: 'Hospital', iconName: 'ambulance' },
-  { name: 'Cafe', iconName: 'coffee' },
-  { name: 'Dog Park', iconName: 'paw' },
-  { name: 'Pub', iconName: 'beer' },
-  { name: 'Space', iconName: 'globe' },
+  { name: "Shopping", iconName: "shopping-cart" },
+  { name: "Hospital", iconName: "ambulance" },
+  { name: "Cafe", iconName: "coffee" },
+  { name: "Dog Park", iconName: "paw" },
+  { name: "Pub", iconName: "beer" },
+  { name: "Space", iconName: "globe" },
 ];
 
 export default function CardDemo() {

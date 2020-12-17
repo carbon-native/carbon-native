@@ -4,7 +4,6 @@
     "icon": "./app-icon.png",
     "version": "3.0.0",
     "slug": "carbon-native-kitchen-sink",
-    "sdkVersion": "36.0.0",
     "privacy": "public",
     "orientation": "portrait",
     "ios": {
@@ -16,9 +15,5 @@
       "package": "com.getcarbonnative.kitchensink"
     },
     "primaryColor": "#FD7253",
-    "loading": {
-      "backgroundColor": "#FD7253",
-      "icon": "./app-icon.png"
-    }
   }
 }
