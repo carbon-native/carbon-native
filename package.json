@@ -4,16 +4,6 @@
   "description": "A set of UI components for building React Native apps.",
   "private": true,
   "author": "",
-  "contributors": [
-    {
-      "name": "Tyler Buchea",
-      "email": "tyler@buchea.com"
-    },
-    {
-      "name": "Josh Buchea",
-      "email": "josh@buchea.com"
-    }
-  ],
   "scripts": {
     "clean": "rimraf dist",
     "package-json": "node ./scripts/package-json.js",
